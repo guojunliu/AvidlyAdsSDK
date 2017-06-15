@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AvidlyAdsSDK'
-  s.version          = '2.0.20'
+  s.version          = '2.0.19'
   s.summary          = 'Avidly Ad SDK'
 
 # This description is used to generate tags and improve search results.
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Avidly Ad SDK. 2017-06-15 steve.liu
+Avidly Ad SDK.
                        DESC
 
   s.homepage         = 'http://ads-sdk-doc.haloapps.com/docs/show/2'
