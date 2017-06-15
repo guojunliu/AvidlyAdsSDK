@@ -161,4 +161,8 @@
  */
 + (void)ThirdpartyLogPaymentWithPlayerId:(NSString *)playerId gameAccountServer:(NSString *)gameAccountServer thirdparty:(NSString *)thirdparty receiptDataString:(NSString *)receiptDataString;
 
+#pragma mark 打点不存数据库且立刻上报服务器
+
++ (void)logUploadWithKey:(NSString *)key value:(id)value;
+
 @end
