@@ -16,21 +16,21 @@ Avidly Ad SDK.
   s.homepage         = 'http://ads-sdk-doc.haloapps.com/docs/show/2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { "steve" => "steve.liu@holaverse.com" }
-  s.source           = { :git => 'https://github.com/guojunliu/AvidlyAdsSDK', :tag => s.version }
+  s.source           = { :git => 'https://github.com/guojunliu/AvidlyAdsSDK.git', :tag => s.version }
 
   s.ios.deployment_target = '8.0'
 
-#  s.source_files = 'TGSDK/Classes/**/*'
+  s.source_files = 'Framework/Appnext/include/*', 'Framework/Chance/include/*', 'Framework/Domob/include/*', 'Framework/OneWay/include/*'
   
-  s.resources = "3rdFramework/ChanceAd-SDK-6.4.3/ChanceAdRes.bundle", "3rdFramework/Domob-SDK-3.6.0/Resource/*", "3rdFramework/Vungle-SDK-4.0.9/Resources/*", "Framework/AvidlyAdsSDK/AvidlyAdsSDK.bundle",
+  s.resources = "Framework/Chance/resource/*", "Framework/Domob/resource/*", "Framework/Vungle/resource/*", "Framework/AvidlyAdsSDK/resource/*",
 
-  s.public_header_files = '3rdFramework/Appnext-SDK-1.8.2/include/**/*', '3rdFramework/ChanceAd-SDK-6.4.3/*.h', '3rdFramework/Domob-SDK-3.6.0/Headers/*.h', '3rdFramework/OneWaySDK-1.3.0/*.h', 
+  s.public_header_files = 'Framework/Appnext/include/*', 'Framework/Chance/include/*', 'Framework/Domob/include/*', 'Framework/OneWay/include/*'
 
-  s.library = 'libsqlite3', 'libz'
+  s.library = 'sqlite3', 'z'
 
   s.frameworks = 'QuartzCore', 'MediaPlayer', 'CoreMedia', 'CoreGraphics', 'CFNetwork', 'WebKit', 'WatchConnectivity', 'SystemConfiguration', 'StoreKit', 'Social', 'MessageUI','JavaScriptCore','EventKit','CoreTelephony','AVFoundation','AudioToolbox','AdSupport'
 
-  s.vendored_libraries = "3rdFramework/Appnext-SDK-1.8.2/libAppnextLib.a", "3rdFramework/Appnext-SDK-1.8.2/libAppnextSDKCore.a", "3rdFramework/ChanceAd-SDK-6.4.3/libChanceAd_Video.a", "3rdFramework/Domob-SDK-3.6.0/libIndependentVideoSDK.a", "3rdFramework/OneWaySDK-1.3.0/OnewaySDK.a"
+  s.vendored_libraries = "Framework/Appnext/libAppnextLib.a", "Framework/Appnext/libAppnextSDKCore.a", "Framework/Chance/libChanceAd_Video.a", "Framework/Domob/libIndependentVideoSDK.a", "Framework/OneWaySDK/OnewaySDK.a"
 
-  s.vendored_frameworks = '3rdFramework/AdColony-iOS-SDK-3.1.0/AdColony.framework', '3rdFramework/Mobvista-SDK-1.9.0/MVSDK.framework', '3rdFramework/Mobvista-SDK-1.9.0/MVSDKReward.framework', '3rdFramework/Unity-SDK-2.1.0/UnityAds.framework', '3rdFramework/Vungle-SDK-4.0.9/VungleSDK.framework', 'Framework/AvidlyAdsSDK/AvidlyAdsSDK.framework', 'Framework/FBAudienceNetwork-4.22.0/FBAudienceNetwork.framework', 'Framework/GoogleMobileAdsSdkiOS-7.19.0/GoogleMobileAds.framework', 'Framework/HolaStatisticalSDK/HolaStatisticalSDK.framework'
+  s.vendored_frameworks = 'Framework/AdColony/AdColony.framework', 'Framework/Mobvista/MVSDK.framework', 'Framework/Mobvista/MVSDKReward.framework', 'Framework/Unity/UnityAds.framework', 'Framework/Vungle/VungleSDK.framework', 'Framework/AvidlyAdsSDK/AvidlyAdsSDK.framework', 'Framework/FBAudienceNetwork/FBAudienceNetwork.framework', 'Framework/GoogleMobileAds/GoogleMobileAds.framework', 'Framework/HolaStatisticalSDK/HolaStatisticalSDK.framework'
 end
