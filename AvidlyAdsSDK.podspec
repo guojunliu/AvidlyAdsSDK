@@ -14,7 +14,7 @@ Avidly Ad SDK.
                        DESC
 
   s.homepage         = 'http://ads-sdk-doc.haloapps.com/docs/show/2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+#  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { "steve" => "steve.liu@holaverse.com" }
   s.source           = { :git => 'https://github.com/guojunliu/AvidlyAdsSDK.git', :tag => s.version }
 
