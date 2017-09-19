@@ -1,4 +1,4 @@
-AvidlyAdsSDK		2.0.24
+AvidlyAdsSDK		2.0.31
 FBAudienceNetwork	4.25.0
 GoogleMobileAds		7.21.0
 AdColony		3.1.0
@@ -8,11 +8,12 @@ Domob			3.6.0
 Mobvista		1.9.0
 OneWay			1.3.0
 Unity			2.1.0
-Vungle			4.0.9
+Vungle			5.1.1
 GDT			4.5.7
 Baidu			4.5
 InMobi			6.2.1
 Centrixlink		2.4.0
 Chartboost		6.6.3
 IronSource		6.6.5
-PlayableAds		1.0.0
+PlayableAds		1.0.4
+MyTarget		4.6.20
