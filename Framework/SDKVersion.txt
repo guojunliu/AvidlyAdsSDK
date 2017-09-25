@@ -17,3 +17,4 @@ Chartboost		6.6.3
 IronSource		6.6.5
 PlayableAds		1.0.4
 MyTarget		4.6.20
+AppLovin		4.2.1
