@@ -1,4 +1,4 @@
-AvidlyAdsSDK		2.0.31
+AvidlyAdsSDK		2.0.32
 FBAudienceNetwork	4.25.0
 GoogleMobileAds		7.21.0
 AdColony		3.1.0
