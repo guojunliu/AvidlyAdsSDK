@@ -1,4 +1,4 @@
-AvidlyAdsSDK		2.0.32
+AvidlyAdsSDK		2.0.33
 FBAudienceNetwork	4.25.0
 GoogleMobileAds		7.21.0
 AdColony		3.1.0
@@ -15,6 +15,7 @@ InMobi			6.2.1
 Centrixlink		2.4.0
 Chartboost		6.6.3
 IronSource		6.6.5
-PlayableAds		1.0.4
+PlayableAds		1.0.6
 MyTarget		4.6.20
 AppLovin		4.2.1
+BatMobi			2.2.0
