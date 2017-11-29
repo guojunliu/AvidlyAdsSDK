@@ -1,4 +1,4 @@
-AvidlyAdsSDK		2.0.33
+AvidlyAdsSDK		2.0.34
 FBAudienceNetwork	4.25.0
 GoogleMobileAds		7.21.0
 AdColony		3.1.0
@@ -19,3 +19,5 @@ PlayableAds		1.0.6
 MyTarget		4.6.20
 AppLovin		4.2.1
 BatMobi			2.2.0
+Maio			1.2.18
+Nend			4.0.1
