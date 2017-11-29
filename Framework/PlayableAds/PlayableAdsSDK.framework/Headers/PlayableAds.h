@@ -10,3 +10,4 @@
 #import <PlayableAdsSDK/PlayableAdsInterstitial.h>
 #import <PlayableAdsSDK/PlayableAdsTools.h>
 #import <PlayableAdsSDK/PlayableAdsGlobalZone.h>
+#import <PlayableAdsSDK/PlayableAdsVersion.h>
