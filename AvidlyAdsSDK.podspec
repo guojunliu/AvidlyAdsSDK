@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AvidlyAdsSDK'
-  s.version          = '2.0.35'
+  s.version          = '2.1.02'
   s.summary          = 'Avidly Ad SDK'
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ Avidly Ad SDK.
 
   s.source_files = 'Framework/Appnext/include/*', 'Framework/Chance/include/*', 'Framework/GDT/include/*'
   
-  s.resources = "Framework/Chance/resource/*", "Framework/Domob/resource/*", "Framework/AvidlyAdsSDK/resource/*", "Framework/Baidu/resource/*", "Framework/Centrixlink/resource/*", "Framework/PlayableAds/resource/*", "Framework/BatMobi/resource/*"
+  s.resources = "Framework/Chance/resource/*", "Framework/Domob/resource/*", "Framework/AvidlyAdsSDK/resource/*", "Framework/Baidu/resource/*",  "Framework/PlayableAds/resource/*", "Framework/Tapjoy/Resources/*", "Framework/BatMobi/resource/*"
 
   s.public_header_files = 'Framework/Appnext/include/*', 'Framework/Chance/include/*', 'Framework/GDT/include/*'
 
@@ -32,5 +32,6 @@ Avidly Ad SDK.
 
   s.vendored_libraries = "Framework/Appnext/libAppnextLib.a", "Framework/Appnext/libAppnextSDKCore.a", "Framework/Chance/libChanceAd_Video.a", "Framework/GDT/libGDTMobSDK.a"
 
-  s.vendored_frameworks = 'Framework/AdColony/AdColony.framework', 'Framework/Mobvista/MVSDK.framework', 'Framework/Mobvista/MVSDKReward.framework', 'Framework/Unity/UnityAds.framework', 'Framework/Vungle/VungleSDK.framework', 'Framework/AvidlyAdsSDK/AvidlyAdsSDK.framework', 'Framework/FBAudienceNetwork/FBAudienceNetwork.framework', 'Framework/GoogleMobileAds/GoogleMobileAds.framework', 'Framework/OneWay/OneWaySDK.framework', 'Framework/Domob/DomobVideoSDK.framework', 'Framework/Baidu/BaiduMobAdSDK.framework', 'Framework/InMobi/InMobiSDK.framework', 'Framework/Centrixlink/Centrixlink.framework', 'Framework/Chartboost/Chartboost.framework', 'Framework/IronSource/IronSource.framework', 'Framework/PlayableAds/PlayableAdsSDK.framework', 'Framework/MyTarget/MyTargetSDK.framework', 'Framework/AppLovin/AppLovinSDK.framework', 'Framework/BatMobi/ZZAdSDK.framework', 'Framework/Maio/Maio.framework', 'Framework/Nend/NendAd.framework'
+  s.vendored_frameworks = 'Framework/AvidlyAdsSDK/AvidlyAdsSDK.framework', 'Framework/AdColony/AdColony.framework', 'Framework/AppLovin/AppLovinSDK.framework', 'Framework/Baidu/BaiduMobAdSDK.framework', 'Framework/BatMobi/ZZAdSDK.framework', 'Framework/Centrixlink/Centrixlink.framework', 'Framework/Chartboost/Chartboost.framework', 'Framework/Domob/DomobVideoSDK.framework', 'Framework/FBAudienceNetwork/FBAudienceNetwork.framework', 'Framework/FBAudienceNetwork/FBAudienceNetworkBiddingKit.framework', 'Framework/GoogleMobileAds/GoogleMobileAds.framework', 'Framework/InMobi/InMobiSDK.framework', 'Framework/IronSource/IronSource.framework', 'Framework/Maio/Maio.framework', 'Framework/Mobvista/MVSDK.framework', 'Framework/Mobvista/MVSDKReward.framework', 'Framework/MyTarget/MyTargetSDK.framework', 'Framework/Nend/NendAd.framework', 'Framework/PlayableAds/PlayableAdsSDK.framework', 'Framework/Tapjoy/Tapjoy.framework', 'Framework/Unity/UnityAds.framework', 'Framework/Vungle/VungleSDK.framework'
+
 end

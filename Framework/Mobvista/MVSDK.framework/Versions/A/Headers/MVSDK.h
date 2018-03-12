@@ -5,7 +5,7 @@
 //  Created by Jomy on 15/9/28.
 //
 
-#define MVSDKVersion @"1.9.0"
+#define MVSDKVersion @"3.3.5"
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -14,8 +14,8 @@
 #import <MVSDK/MVTemplate.h>
 #import <MVSDK/MVFrame.h>
 #import <MVSDK/MVNativeScrollView.h>
-
-
+#import <MVSDK/MVMediaView.h>
+#import <MVSDK/MVUserInfo.h>
 
 @interface MVSDK : NSObject
 
@@ -48,6 +48,25 @@
  */
 - (void)preloadNativeAdsWithUnitId:(nonnull NSString *)unitId
                      fbPlacementId:(nullable NSString *)fbPlacementId
+                forNumAdsRequested:(NSUInteger)numAdsRequested;
+
+/**
+ *
+ @method
+ 
+ @abstract The method that kicks off the preloading of native ads. It may be called again in the future to refresh the ads manually.
+ 
+ @param unitId The id of the ad unit. You can create your unit id from our Portal.
+ 
+ @param fbPlacementId The Facebook PlacementID is used to request ads from Facebook. You can also set the placementID in our portal. The ID you set in our web portal will replace the ID you set here in future.
+ 
+ @param videoSupport If the support video ads, set videoSupport  to yes.
+ 
+ @param numAdsRequested The number of ads you would like to preload. Max number is 10. If you pass any number bigger than 10, it will be reset to 10.
+ */
+- (void)preloadNativeAdsWithUnitId:(nonnull NSString *)unitId
+                     fbPlacementId:(nullable NSString *)fbPlacementId
+                     videoSupport:(BOOL)videoSupport
                 forNumAdsRequested:(NSUInteger)numAdsRequested;
 
 /**
@@ -98,8 +117,9 @@
 - (void)preloadAppWallAdsWithUnitId:(nonnull NSString *)unitId;
 
 
+@property (nonatomic, assign) BOOL autoSetAudioCategory;
 
-
+- (void)setUserInfo:(nonnull MVUserInfo *)userInfo;
 
 
 

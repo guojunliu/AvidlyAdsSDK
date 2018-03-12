@@ -33,31 +33,15 @@ AL_ASSUME_NONNULL_BEGIN
  * @param adSize    Size of an ad to load. Must not be nil.
  * @param delegate  A callback to notify of the fact that the ad is loaded.
  */
-- (void)loadNextAd:(ALAdSize *)adSize andNotify:(alnullable id <ALAdLoadDelegate>)delegate;
+- (void)loadNextAd:(ALAdSize *)adSize andNotify:(id<ALAdLoadDelegate>)delegate;
 
 /**
- * Fetch a new ad, of a given size, notifying a supplied delegate on completion.
+ * Fetch a new ad, for a given zone, notifying a supplied delegate on completion.
  *
- * @param adSize   Size of an ad to load. Must not be nil.
- * @param delegate A callback to notify of the fact that the ad is loaded.
+ * @param zoneIdentifier  The identifier of the zone to load an ad for. Must not be nil.
+ * @param delegate        A callback to notify of the fact that the ad is loaded.
  */
-- (void)loadNextMediatedAd:(ALAdSize *)adSize andNotify:(alnullable id <ALAdLoadDelegate>)delegate;
-
-/**
- * Pre-load an ad of a given size in the background, if one is not already available.
- *
- * @param adSize Size of the ad to cache.
- */
-- (void)preloadAdOfSize:(ALAdSize *)adSize;
-
-/**
- * Check whether an ad of a given size is pre-loaded and ready to be displayed.
- *
- * @param adSize Size of the ad to check for.
- *
- * @return YES if an ad of this size is pre-loaded and ready to display without further network activity. NO if requesting an ad of this size would require fetching over the network.
- */
-- (BOOL)hasPreloadedAdOfSize:(ALAdSize *)adSize;
+- (void)loadNextAdForZoneIdentifier:(NSString *)zoneIdentifier andNotify:(id<ALAdLoadDelegate>)delegate;
 
 /**
  * @name Observing Ad Rotations
@@ -81,6 +65,39 @@ AL_ASSUME_NONNULL_BEGIN
 
 - (id)init __attribute__((unavailable("Don't instantiate ALAdService, access one via [sdk adService] instead.")));
 
+@end
+
+@interface ALAdService(ALMultizoneSupport)
+
+/**
+ * Fetch a new ad for the given ad token. Provided ad token must be received from AppLovin S2S API.
+ *
+ * <b>Please note:</b> this method is designed to be called by SDK mediation providers. Please use
+ * <code>loadNextAdForZoneIdentifier:andNotify:</code> for regular integrations.
+ *
+ * @param adToken   Ad token returned from AppLovin S2S API. Must not be nil.
+ * @param delegate  A callback to notify that the ad has been loaded. Must not be nil.
+ */
+- (void)loadNextAdForAdToken:(NSString *)adToken andNotify:(id<ALAdLoadDelegate>)delegate;
+
+/**
+ * Fetch a new ad for any of the provided zone identifiers.
+ *
+ * <b>Please note:</b> this method is designed to be called by SDK mediation providers. Please use
+ * <code>loadNextAdForZoneIdentifier:andNotify:</code> for regular integrations.
+ *
+ * @param zoneIdentifiers  An array of zone identifiers for which an ad should be loaded. Must not be nil.
+ * @param delegate         A callback to notify that the ad has been loaded. Must not be nil.
+ */
+- (void)loadNextAdForZoneIdentifiers:(NSArray<NSString *> *)zoneIdentifiers andNotify:(id<ALAdLoadDelegate>)delegate;
+
+@end
+
+@interface ALAdService(ALDeprecated)
+- (void)preloadAdOfSize:(ALAdSize *)adSize __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAd:andNotify:] to load ads to display.");
+- (void)preloadAdForZoneIdentifier:(NSString *)zoneIdentifier __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAdForZoneIdentifier:andNotify:] to load ads to display.");
+- (BOOL)hasPreloadedAdOfSize:(ALAdSize *)adSize __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAd:andNotify:] to load ads to display.");
+- (BOOL)hasPreloadedAdForZoneIdentifier:(NSString *)zoneIdentifier __deprecated_msg("Manually preloading ads in the background has been deprecated and will be removed in a future SDK version. Please use [ALAdService loadNextAdForZoneIdentifier:andNotify:] to load ads to display.");
 @end
 
 /**
@@ -120,4 +137,3 @@ extern NSString *const ALSdkExpandAd;
 extern NSString *const ALSdkContractAd;
 
 AL_ASSUME_NONNULL_END
-

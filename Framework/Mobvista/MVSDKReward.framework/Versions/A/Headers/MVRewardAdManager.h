@@ -6,10 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MVRewardAdInfo.h"
+#import <MVSDK/MVRewardAdInfo.h>
 
 #define kMVErrorCodeNoAdsAvailableToPlay          12930004
 #define kMVErrorCodeFailedToPlay                  12930005
+#define kMVErrorCodeFailedToLoad                  12930006
+#define kMVErrorCodeDailyLimit                    12930007
+#define kMVErrorCodeLoadAdsTimeOut                12930008
 
 #pragma mark - MVRewardAdManagerDelegate
 
@@ -80,6 +83,12 @@
 
 
 @interface MVRewardAdManager : NSObject
+
+/**
+ * Play the video is mute in the beginning ,defult is NO
+ *
+ */
+@property (nonatomic, assign) BOOL  playVideoMute;
 
 
 /**

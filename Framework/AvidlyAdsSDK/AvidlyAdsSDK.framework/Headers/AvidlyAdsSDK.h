@@ -53,4 +53,7 @@
  @return 广告配置
  */
 + (NSDictionary *)getAdConfigWithPlacementID:(NSString *)placementID;
+
++ (void)loadAvidlyAdsByManual;
+
 @end

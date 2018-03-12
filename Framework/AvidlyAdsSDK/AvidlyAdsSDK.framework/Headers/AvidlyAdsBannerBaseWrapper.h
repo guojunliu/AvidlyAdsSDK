@@ -22,6 +22,13 @@
  */
 - (UIView *)getView;
 
+/**
+ 获取cp传进来的vc
+
+ @return cp传进来的vc
+ */
+- (UIViewController *)getVC;
+
 /*
  * 设置回调代理
  */

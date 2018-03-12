@@ -37,8 +37,10 @@ typedef NS_OPTIONS(NSInteger, FBNativeAdsCachePolicy) {
     FBNativeAdsCachePolicyCoverImage = 1 << 2,
     /// Video is cached
     FBNativeAdsCachePolicyVideo = 1 << 3,
+    /// AdChoices icon is cached
+    FBNativeAdsCachePolicyAdChoices = 1 << 4,
     /// All content is cached
-    FBNativeAdsCachePolicyAll = FBNativeAdsCachePolicyCoverImage | FBNativeAdsCachePolicyIcon | FBNativeAdsCachePolicyVideo,
+    FBNativeAdsCachePolicyAll = FBNativeAdsCachePolicyCoverImage | FBNativeAdsCachePolicyIcon | FBNativeAdsCachePolicyVideo | FBNativeAdsCachePolicyAdChoices,
 };
 
 /**
@@ -158,6 +160,13 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED
 - (void)loadAd;
 
 /**
+  Begins loading the FBNativeAd content from a bid payload attained through a server side bid.
+
+ - Parameter bidPayload: The payload of the ad bid. You can get your bid payload from Facebook bidder endpoint.
+ */
+- (void)loadAdWithBidPayload:(nonnull NSString *)bidPayload;
+
+/**
   Call isAdValid to check whether native ad is valid & internal consistent prior rendering using its properties. If
   rendering is done as part of the loadAd callback, it is guarantee to be consistent
  */
@@ -221,7 +230,7 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED
 FB_EXPORT struct FBAdStarRating {
     /// The value of the star rating, X in X/5
     CGFloat value;
-    // The total possible star rating, Y in 4/Y
+    /// The total possible star rating, Y in 4/Y
     NSInteger scale;
 } FBAdStarRating;
 

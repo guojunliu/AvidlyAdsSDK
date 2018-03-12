@@ -41,7 +41,7 @@ FB_CLASS_EXPORT
  */
 - (instancetype)initWithPlacementID:(NSString *)placementID
                              adSize:(FBAdSize)adSize
-                 rootViewController:(nullable UIViewController *)viewController NS_DESIGNATED_INITIALIZER;
+                 rootViewController:(nullable UIViewController *)rootViewController NS_DESIGNATED_INITIALIZER;
 
 /**
   Begins loading the FBAdView content.
@@ -51,6 +51,17 @@ FB_CLASS_EXPORT
  of `FBAdViewDelegate` if you would like to be notified as loading succeeds or fails.
  */
 - (void)loadAd;
+
+/**
+ Begins loading the FBAdView content from a bid payload attained through a server side bid.
+
+
+ You can implement `adViewDidLoad:` and `adView:didFailWithError:` methods
+ of `FBAdViewDelegate` if you would like to be notified as loading succeeds or fails.
+
+ - Parameter bidPayload: The payload of the ad bid. You can get your bid id from Facebook bidder endpoint.
+ */
+- (void)loadAdWithBidPayload:(NSString *)bidPayload;
 
 /**
   This is a method to disable auto refresh for the FBAdView instance

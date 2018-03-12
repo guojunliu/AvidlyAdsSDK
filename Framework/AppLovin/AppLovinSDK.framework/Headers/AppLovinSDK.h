@@ -16,12 +16,14 @@
 #import <AppLovinSDK/ALAdUpdateDelegate.h>
 #import <AppLovinSDK/ALAdVideoPlaybackDelegate.h>
 #import <AppLovinSDK/ALAdView.h>
+#import <AppLovinSDK/ALAdViewEventDelegate.h>
 #import <AppLovinSDK/ALAnnotations.h>
 #import <AppLovinSDK/ALErrorCodes.h>
 #import <AppLovinSDK/ALEventTypes.h>
 #import <AppLovinSDK/ALEventService.h>
 #import <AppLovinSDK/ALIncentivizedInterstitialAd.h>
 #import <AppLovinSDK/ALInterstitialAd.h>
+#import <AppLovinSDK/ALMediationProvider.h>
 #import <AppLovinSDK/ALPostbackDelegate.h>
 #import <AppLovinSDK/ALPostbackService.h>
 #import <AppLovinSDK/ALSdk.h>
