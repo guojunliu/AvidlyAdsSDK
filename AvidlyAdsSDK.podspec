@@ -20,9 +20,10 @@ Avidly Ad SDK.
 
   s.ios.deployment_target = '8.0'
 
+#   Oneway的.a不支持cocoapods，故需CP手动加入
   s.source_files = 'Framework/Appnext/include/*', 'Framework/Chance/include/*', 'Framework/GDT/include/*'
   
-  s.resources = "Framework/Chance/resource/*", "Framework/Domob/resource/*", "Framework/AvidlyAdsSDK/resource/*", "Framework/Baidu/resource/*",  "Framework/PlayableAds/resource/*", "Framework/Tapjoy/Resources/*", "Framework/BatMobi/resource/*"
+  s.resources = "Framework/Chance/resource/*", "Framework/Domob/resource/*", "Framework/AvidlyAdsSDK/resource/*", "Framework/Baidu/resource/*", "Framework/PlayableAds/resource/*", "Framework/BatMobi/resource/*", "Framework/Tapjoy/resource/*"
 
   s.public_header_files = 'Framework/Appnext/include/*', 'Framework/Chance/include/*', 'Framework/GDT/include/*'
 
