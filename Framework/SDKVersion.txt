@@ -4,9 +4,9 @@ AppLovin		4.8.3
 Appnext			1.8.2
 Baidu			4.5
 BatMobi			2.2.0
-Centrixlink		2.4.0
+Centrixlink		2.5.2
 Chance			6.4.3
-Chartboost		6.6.3
+Chartboost		7.1.2
 Domob			3.6.0
 FBAudienceNetwork	4.27.2
 GDT			4.5.7

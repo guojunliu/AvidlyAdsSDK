@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AvidlyAdsSDK'
-  s.version          = '2.1.02'
+  s.version          = '3.0.01'
   s.summary          = 'Avidly Ad SDK'
 
 # This description is used to generate tags and improve search results.
@@ -20,7 +20,6 @@ Avidly Ad SDK.
 
   s.ios.deployment_target = '8.0'
 
-#   Oneway的.a不支持cocoapods，故需CP手动加入
   s.source_files = 'Framework/Appnext/include/*', 'Framework/Chance/include/*', 'Framework/GDT/include/*'
   
   s.resources = "Framework/Chance/resource/*", "Framework/Domob/resource/*", "Framework/AvidlyAdsSDK/resource/*", "Framework/Baidu/resource/*", "Framework/PlayableAds/resource/*", "Framework/BatMobi/resource/*", "Framework/Tapjoy/resource/*"

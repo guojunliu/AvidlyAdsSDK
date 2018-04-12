@@ -10,11 +10,6 @@
 @class CentrixlinkADItem;
 
 
-
-
-
-
-
 #pragma mark - CentrixLinkADDelegate
 
 @protocol CentrixLinkADDelegate <NSObject>
@@ -35,7 +30,7 @@
  *
  *  @param hasPreload YES:存在 NO:不存在
  */
-- (void)centrixLinkHasPreloadAD:(BOOL)hasPreload;
+- (void)centrixLinkAdPlayability:(BOOL)isAdPlayable;
 
 
 /**
@@ -83,7 +78,7 @@
 /**
  *  开屏广告关闭
  *
- *  @param info z
+ *  @param info
  */
 - (void)centrixlinkSplashADClosed:(NSDictionary *)info;
 
@@ -91,7 +86,7 @@
 /**
  *  开屏广告显示成功
  *
- *  @param info z
+ *  @param info
  */
 - (void)centrixlinkSplashADDidShow:(NSDictionary *)info;
 
