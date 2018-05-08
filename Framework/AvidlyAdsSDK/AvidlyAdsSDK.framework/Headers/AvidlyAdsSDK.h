@@ -12,12 +12,12 @@
 #import "AvidlyAdsBannerStripWrapper.h"
 #import "AvidlyAdsBannerRectangleWrapper.h"
 #import "AvidlyIntersitialWrapper.h"
-#import "AvidlyRewardWrapper.h"
-#import "AvidlyAdsSDKVersion.h"
-#import "AvidlyAdsWallWrapper.h"
-#import "AvidlyRewardDebug.h"
 #import "AvidlyInterstitialDebug.h"
+#import "AvidlyRewardWrapper.h"
+#import "AvidlyRewardDebug.h"
+#import "AvidlyAdsWallWrapper.h"
 #import "AvidlyAdsGlobalZone.h"
+#import "AvidlyAdsSDKVersion.h"
 
 @interface AvidlyAdsSDK : NSObject
 

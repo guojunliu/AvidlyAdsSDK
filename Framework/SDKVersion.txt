@@ -1,4 +1,4 @@
-AvidlyAdsSDK		2.1.02
+AvidlyAdsSDK		3.0.02
 AdColony		3.1.0
 AppLovin		4.8.3
 Appnext			1.8.2
@@ -22,3 +22,5 @@ PlayableAds		1.0.7
 Tapjoy			11.11.1
 Unity			2.1.0
 Vungle			5.3.0
+Youlan			1.0.4
+Toutiao			1.8.0
