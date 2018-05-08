@@ -22,7 +22,7 @@ Avidly Ad SDK.
 
   s.source_files = 'Framework/Appnext/include/*', 'Framework/Chance/include/*', 'Framework/GDT/include/*'
   
-  s.resources = "Framework/Chance/resource/*", "Framework/Domob/resource/*", "Framework/AvidlyAdsSDK/resource/*", "Framework/Baidu/resource/*", "Framework/PlayableAds/resource/*", "Framework/BatMobi/resource/*", "Framework/Tapjoy/resource/*", "Framework/Youlan/resource/*", "Framework/Toutiao/resource/*"
+  s.resources = "Framework/Chance/resource/*", "Framework/Domob/resource/*", "Framework/AvidlyAdsSDK/resource/*", "Framework/Baidu/resource/*", "Framework/PlayableAds/resource/*", "Framework/BatMobi/resource/*", "Framework/Tapjoy/Resource/*", "Framework/Youlan/resource/*", "Framework/Toutiao/resource/*"
 
   s.public_header_files = 'Framework/Appnext/include/*', 'Framework/Chance/include/*', 'Framework/GDT/include/*'
 
