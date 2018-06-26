@@ -1,6 +1,6 @@
 //
 //  MyTargetSDK.h
-//  myTargetSDK 4.6.20
+//  myTargetSDK 4.7.9
 //
 //  Created by Anton Bulankin on 24.09.15.
 //  Copyright © 2015 Mail.ru. All rights reserved.
@@ -12,6 +12,7 @@
 #import <MyTargetSDK/MTRGAppwallAdView.h>
 #import <MyTargetSDK/MTRGAppwallBannerAdView.h>
 #import <MyTargetSDK/MTRGNativeAd.h>
+#import <MyTargetSDK/MTRGNativeAdLoader.h>
 #import <MyTargetSDK/MTRGChatListAdView.h>
 #import <MyTargetSDK/MTRGNativePromoBanner.h>
 #import <MyTargetSDK/MTRGContentStreamAdView.h>
@@ -38,3 +39,4 @@
 #import <MyTargetSDK/MTRGInstreamAudioAd.h>
 #import <MyTargetSDK/MTRGInstreamAudioAdPlayer.h>
 #import <MyTargetSDK/MTRGVersion.h>
+#import <MyTargetSDK/MTRGPrivacy.h>

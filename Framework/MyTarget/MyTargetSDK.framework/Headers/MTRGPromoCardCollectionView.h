@@ -1,6 +1,6 @@
 //
 //  MTRGPromoCardCollectionView.h
-//  MyTargetSDK
+//  myTargetSDK 4.7.9
 //
 //  Created by Andrey Seredkin on 02.11.16.
 //  Copyright © 2016 Mail.ru Group. All rights reserved.
@@ -8,19 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <MyTargetSDK/MTRGNativePromoCard.h>
+#import <MyTargetSDK/MTRGPromoCardSliderProtocol.h>
 
-@protocol MTRGPromoCardCollectionViewDelegate <NSObject>
+NS_ASSUME_NONNULL_BEGIN
 
-- (void)onCardClick:(MTRGNativePromoCard *)card;
-- (void)onCardChange:(MTRGNativePromoCard *)card;
+@interface MTRGPromoCardCollectionView : UICollectionView <MTRGPromoCardSliderProtocol, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@end
-
-@interface MTRGPromoCardCollectionView : UICollectionView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
-
-@property (nonatomic, weak) id <MTRGPromoCardCollectionViewDelegate> cardCollectionViewDelegate;
-@property (nonatomic, readonly) MTRGNativePromoCard *currentPromoCard;
+@property (nonatomic, weak, nullable) id <MTRGPromoCardSliderDelegate> cardSliderDelegate;
+@property (nonatomic) BOOL isCardsClickable;
 
 - (void)setCards:(NSArray<MTRGNativePromoCard *> *)cards;
 
 @end
+
+NS_ASSUME_NONNULL_END

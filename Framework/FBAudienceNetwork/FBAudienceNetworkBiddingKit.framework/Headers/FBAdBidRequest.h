@@ -39,10 +39,12 @@ typedef NS_ENUM(NSInteger, FBAdBidFormat) {
     FBAdBidFormatInterstitial,
     // Bid For Native
     FBAdBidFormatNative,
+    // Bid For Native Banner
+    FBAdBidFormatNativeBanner,
     // Bid For Rewarded Video
     FBAdBidFormatRewardedVideo,
     // Bid For Instream Video
-    FBAdBidFormatInstreamVideo
+    FBAdBidFormatInstreamVideo,
 };
 
 typedef NS_ENUM(NSInteger, FBAdBidAuctionType) {
