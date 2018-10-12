@@ -20,9 +20,6 @@
 #import "UPAccessPrivacyInfoStatusEnum.h"
 
 #import "AvidlyAdsSDK.h"
-#import "AvidlyAdsBannerBaseWrapper.h"
-#import "AvidlyAdsBannerStripWrapper.h"
-#import "AvidlyAdsBannerRectangleWrapper.h"
 #import "AvidlyIntersitialWrapper.h"
 #import "AvidlyInterstitialDebug.h"
 #import "AvidlyRewardWrapper.h"

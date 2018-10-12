@@ -77,6 +77,40 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED
                     viewController:(nullable UIViewController *)viewController
                     clickableViews:(nullable NSArray<UIView *> *)clickableViews;
 
+
+/**
+ This is a method to associate a FBNativeAd with the UIView you will use to display the native ads.
+
+ - Parameter view: The UIView you created to render all the native ads data elements.
+ - Parameter mediaView: The FBMediaView you created to render the media (cover image / video / carousel)
+ - Parameter iconImageView: The UIImageView you created to render the icon
+ - Parameter viewController: The UIViewController that will be used to present SKStoreProductViewController
+ (iTunes Store product information) or the in-app browser. If nil is passed, the top view controller currently shown will be used.
+ The whole area of the UIView will be clickable.
+ */
+- (void)registerViewForInteraction:(UIView *)view
+                         mediaView:(FBMediaView *)mediaView
+                     iconImageView:(nullable UIImageView *)iconImageView
+                    viewController:(nullable UIViewController *)viewController;
+
+/**
+ This is a method to associate FBNativeAd with the UIView you will use to display the native ads
+ and set clickable areas.
+
+ - Parameter view: The UIView you created to render all the native ads data elements.
+ - Parameter mediaView: The FBMediaView you created to render the media (cover image / video / carousel)
+ - Parameter iconImageView: The UIImageView you created to render the icon
+ - Parameter viewController: The UIViewController that will be used to present SKStoreProductViewController
+ (iTunes Store product information). If nil is passed, the top view controller currently shown will be used.
+ - Parameter clickableViews: An array of UIView you created to render the native ads data element, e.g.
+ CallToAction button, Icon image, which you want to specify as clickable.
+ */
+- (void)registerViewForInteraction:(UIView *)view
+                         mediaView:(FBMediaView *)mediaView
+                     iconImageView:(nullable UIImageView *)iconImageView
+                    viewController:(nullable UIViewController *)viewController
+                    clickableViews:(nullable NSArray<UIView *> *)clickableViews;
+
 /**
  This is a method to use to download all media for the ad (adChoicesIcon, icon, image, video).
  This is only needed to be called if the mediaCachePolicy is set to FBNativeAdsCachePolicyNone.

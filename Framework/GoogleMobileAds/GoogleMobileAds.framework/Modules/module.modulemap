@@ -4,6 +4,9 @@ framework module GoogleMobileAds {
   export *
   module * { export * }
 
+  link "sqlite3"
+  link "z"
+
   link framework "AdSupport"
   link framework "AudioToolbox"
   link framework "AVFoundation"
