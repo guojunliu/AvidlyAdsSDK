@@ -1,0 +1,6 @@
+framework module ZZDWKit {
+  umbrella header "ZZDWKit.h"
+
+  export *
+  module * { export * }
+}

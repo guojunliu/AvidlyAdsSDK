@@ -1,0 +1,6 @@
+framework module ZZAdVideoSDK {
+  umbrella header "ZZAdVideoSDK.h"
+
+  export *
+  module * { export * }
+}

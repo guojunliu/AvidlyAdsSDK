@@ -16,6 +16,7 @@
 #import "AvidlyAdsGlobalZone.h"
 #import "AvidlyAdsSDKVersion.h"
 #import "UPAccessPrivacyInfoStatusEnum.h"
+#import "UPIconWrapper.h"
 
 @interface AvidlyAdsSDK : NSObject
 

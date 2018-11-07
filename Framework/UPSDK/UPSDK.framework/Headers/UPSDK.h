@@ -18,6 +18,7 @@
 #import "UPSDKVersion.h"
 #import "UPSDKGlobalZone.h"
 #import "UPAccessPrivacyInfoStatusEnum.h"
+#import "UPIconWrapper.h"
 
 #import "AvidlyAdsSDK.h"
 #import "AvidlyIntersitialWrapper.h"
