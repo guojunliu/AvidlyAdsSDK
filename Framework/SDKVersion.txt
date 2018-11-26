@@ -10,7 +10,7 @@ Chance			6.4.3
 Chartboost		7.2.0
 Domob			3.6.0
 FBAudienceNetwork	4.99.3
-GDT			4.5.7
+GDT			4.8.1
 GoogleMobileAds		7.32.88
 InMobi			7.0.1
 IronSource		6.7.9
