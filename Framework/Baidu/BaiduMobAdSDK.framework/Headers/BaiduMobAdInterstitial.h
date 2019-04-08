@@ -24,7 +24,7 @@ typedef enum _BaiduMobAdInterstitialType {
 /**
  *  委托对象
  */
-@property (nonatomic ,assign) id<BaiduMobAdInterstitialDelegate> delegate;
+@property (nonatomic ,weak) id<BaiduMobAdInterstitialDelegate> delegate;
 
 
 /**

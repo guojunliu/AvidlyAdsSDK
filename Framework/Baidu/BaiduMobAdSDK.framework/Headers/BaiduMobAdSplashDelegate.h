@@ -57,66 +57,13 @@
  */
 - (void)splashDidDismissLp:(BaiduMobAdSplash *)splash;
 
-
-///---------------------------------------------------------------------------------------
-/// @name 人群属性板块
-///---------------------------------------------------------------------------------------
-
 /**
- *  关键词数组
+ *  广告加载完成
+ *  adType:广告类型 MaterialType
+ *  videoDuration:视频时长，仅广告为视频时出现。非视频类广告默认0。 单位ms
  */
--(NSArray*) keywords;
-
-/**
- *  用户性别
- */
--(BaiduMobAdUserGender) userGender;
-
-/**
- *  用户生日
- */
--(NSDate*) userBirthday;
-
-/**
- *  用户城市
- */
--(NSString*) userCity;
-
-
-/**
- *  用户邮编
- */
--(NSString*) userPostalCode;
-
-
-/**
- *  用户职业
- */
--(NSString*) userWork;
-
-/**
- *  - 用户最高教育学历
- *  - 学历输入数字，范围为0-6
- *  - 0代表小学，1代表初中，2代表中专/高中，3代表专科
- *  - 4代表本科，5代表硕士，6代表博士
- */
--(NSInteger) userEducation;
-
-/**
- *  - 用户收入
- *  - 收入输入数字,以元为单位
- */
--(NSInteger) userSalary;
-
-/**
- *  用户爱好
- */
--(NSArray*) userHobbies;
-
-/**
- *  其他自定义字段,key以及value都为NSString
- */
--(NSDictionary*) userOtherAttributes;
-
+- (void)splashDidReady:(BaiduMobAdSplash *)splash
+             AndAdType:(NSString *)adType
+         VideoDuration:(NSInteger)videoDuration;
 
 @end

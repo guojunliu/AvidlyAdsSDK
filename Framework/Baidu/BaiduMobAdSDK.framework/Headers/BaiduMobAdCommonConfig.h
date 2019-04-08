@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.5"
+#define SDK_VERSION_IN_MSSP @"4.6"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -36,7 +36,11 @@ typedef enum {
     onClick, //广告点击
     onSkip, //跳过视频
     onShowEndCard,// 展现endcard
-    onClickEndCard// 点击endcard
+    onClickEndCard,// 点击endcard
+    onClickDownloadDirect, // 视频下载广告点击直接下载
+    onCacheSuccess,//视频缓存成功
+    onCacheFail,//视频缓存失败
+    onCacheExpire//广告过期
 } BaiduAdNativeVideoEvent;
 
 /**

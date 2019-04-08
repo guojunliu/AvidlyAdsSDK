@@ -14,7 +14,7 @@
 
 @optional
 /**
- *  应用在union.baidu.com上的APPID
+ *  应用在mssp.baidu.com上的APPID
  */
 - (NSString *)publisherId;
 
@@ -26,12 +26,12 @@
 /**
  * 模版高度，仅用于信息流模版广告
  */
--(NSNumber*)height;
+-(NSNumber*)baiduMobAdsHeight;
 
 /**
  * 模版宽度，仅用于信息流模版广告
  */
--(NSNumber*)width;
+-(NSNumber*)baiduMobAdsWidth;
 
 /**
  *  渠道ID
@@ -57,83 +57,14 @@
 - (void)nativeAdsFailLoad:(BaiduMobFailReason) reason;
 
 /**
- * 对于视频广告，展现一张视频预览图，点击可选择开始播放视频
- */
-- (void)nativeAdVideoAreaClick:(BaiduMobAdNativeAdView*)nativeAdView;
-
-/**
  *  广告点击
  */
-- (void)nativeAdClicked:(BaiduMobAdNativeAdView*)nativeAdView;
+- (void)nativeAdClicked:(UIView*)nativeAdView;
 
 /**
  *  广告详情页关闭
  */
--(void)didDismissLandingPage:(BaiduMobAdNativeAdView *)nativeAdView;
-///---------------------------------------------------------------------------------------
-/// @name 人群属性板块
-///---------------------------------------------------------------------------------------
-
-/**
- *  关键词数组
- */
--(NSArray*) keywords;
-
-/**
- * 附加字段
- */
--(NSDictionary*) extraDic;
-
-/**
- *  用户性别
- */
--(BaiduMobAdUserGender) userGender;
-
-/**
- *  用户生日
- */
--(NSDate*) userBirthday;
-
-/**
- *  用户城市
- */
--(NSString*) userCity;
-
-
-/**
- *  用户邮编
- */
--(NSString*) userPostalCode;
-
-
-/**
- *  用户职业
- */
--(NSString*) userWork;
-
-/**
- *  - 用户最高教育学历
- *  - 学历输入数字，范围为0-6
- *  - 0代表小学，1代表初中，2代表中专/高中，3代表专科
- *  - 4代表本科，5代表硕士，6代表博士
- */
--(NSInteger) userEducation;
-
-/**
- *  - 用户收入
- *  - 收入输入数字,以元为单位
- */
--(NSInteger) userSalary;
-
-/**
- *  用户爱好
- */
--(NSArray*) userHobbies;
-
-/**
- *  其他自定义字段,key以及value都为NSString
- */
--(NSDictionary*) userOtherAttributes;
+-(void)didDismissLandingPage:(UIView *)nativeAdView;
 
 
 

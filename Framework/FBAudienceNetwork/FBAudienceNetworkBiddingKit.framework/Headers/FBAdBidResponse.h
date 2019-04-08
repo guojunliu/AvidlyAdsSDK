@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)getBidRequestID;
 - (NSString *)getImpressionID;
 - (NSString *)getPlacementID;
-- (CGFloat)getPrice;
+- (double)getPrice;
 - (nullable NSString *)getCurrency;
 - (nullable NSString *)getPayload;
 - (nullable NSString *)getErrorMessage;

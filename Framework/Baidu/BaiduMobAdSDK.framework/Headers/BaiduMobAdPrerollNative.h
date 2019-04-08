@@ -21,7 +21,7 @@
 /**
  * 广告delegate
  */
-@property (nonatomic ,assign) id<BaiduMobAdPrerollNativeDelegate> delegate;
+@property (nonatomic ,weak) id<BaiduMobAdPrerollNativeDelegate> delegate;
 
 /**
  * 视频高度

@@ -19,10 +19,11 @@
 #import <UIKit/UIKit.h>
 
 #import <FBAudienceNetwork/FBAdDefines.h>
+#import <FBAudienceNetwork/FBMediaView.h>
 #import <FBAudienceNetwork/UIView+FBNativeAdViewTag.h>
 
 FB_CLASS_EXPORT
-@interface FBAdIconView : UIView
+@interface FBAdIconView : FBMediaView
 
 /**
  The tag for the icon view. It always returns FBNativeAdViewTagIcon.

@@ -48,53 +48,56 @@
 /**
  * 小图
  */
-@property (assign, nonatomic)  UIImageView *iconImageView;
+@property (strong, nonatomic)  UIImageView *iconImageView;
 /**
  * 大图
  */
-@property (assign, nonatomic)  UIImageView *mainImageView;
+@property (strong, nonatomic)  UIImageView *mainImageView;
 
 /**
  * 广告标示
  */
-@property (assign, nonatomic)  UIImageView *adLogoImageView;
+@property (strong, nonatomic)  UIImageView *adLogoImageView;
 /**
  * 百度广告logo
  */
-@property (assign, nonatomic)  UIImageView *baiduLogoImageView;
+@property (strong, nonatomic)  UIImageView *baiduLogoImageView;
 
 /**
  * 标题 view
  */
-@property (assign, nonatomic)  UILabel *titleLabel;
+@property (strong, nonatomic)  UILabel *titleLabel;
 /**
  * 描述 view
  */
-@property (assign, nonatomic)  UILabel *textLabel;
+@property (strong, nonatomic)  UILabel *textLabel;
 /**
  * 品牌名称 view
  */
-@property (assign, nonatomic)  UILabel *brandLabel;
+@property (strong, nonatomic)  UILabel *brandLabel;
 /**
  * 视频 view
  */
-@property (assign, nonatomic)  BaiduMobAdNativeVideoBaseView *videoView;
+@property (strong, nonatomic)  BaiduMobAdNativeVideoBaseView *videoView;
 /**
  * web view
  */
-@property (assign, nonatomic)  BaiduMobAdNativeWebView *webView;
+@property (strong, nonatomic)  BaiduMobAdNativeWebView *webView;
 /**
  *  展示用的vc, 可以不传
  */
-@property (nonatomic, assign)  UIViewController *presentAdViewController;
+@property (nonatomic, strong)  UIViewController *presentAdViewController;
 
 /**
  * 根据BaiduMobAdNativeAdObject广告内容，在广告视图上缓存和展示广告,同时关联广告视图和点击展现行为
  * object 包含文字内容和物料地址
  */
 - (void)loadAndDisplayNativeAdWithObject:(BaiduMobAdNativeAdObject *)object completion:(BaiduMobAdViewCompletionBlock)completionBlock;
-/**
- * 发送展现日志
- */
+
 - (void)trackImpression;
+
+- (BOOL)render;
+
++ (void)dealTapGesture:(BOOL) deal;
+
 @end

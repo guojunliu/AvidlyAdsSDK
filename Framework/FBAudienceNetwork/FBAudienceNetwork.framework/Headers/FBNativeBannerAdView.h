@@ -34,6 +34,8 @@ typedef NS_ENUM(NSInteger, FBNativeBannerAdViewType) {
     FBNativeBannerAdViewTypeGenericHeight100 = 1,
     /// Fixed height view, 120 points (banner equivalent)
     FBNativeBannerAdViewTypeGenericHeight120,
+    /// Fixed height view, 50 points (banner equivalent)
+    FBNativeBannerAdViewTypeGenericHeight50,
 };
 
 /**
@@ -49,16 +51,16 @@ FB_CLASS_EXPORT
 
 /**
  This is a method to create a native ad template using the given placement id and type.
- - Parameter nativeBannerAd: The native banner ad to use to create this view.
- - Parameter type: The type of this native banner ad template. For more information, consult FBNativeAdBannerViewType.
+ @param nativeBannerAd The native banner ad to use to create this view.
+ @param type The type of this native banner ad template. For more information, consult FBNativeAdBannerViewType.
  */
 + (instancetype)nativeBannerAdViewWithNativeBannerAd:(FBNativeBannerAd *)nativeBannerAd withType:(FBNativeBannerAdViewType)type;
 
 /**
  This is a method to create a native ad template using the given placement id and type.
- - Parameter nativeBannerAd: The native banner ad to use to create this view.
- - Parameter type: The type of this native banner ad template. For more information, consult FBNativeAdBannerViewType.
- - Parameter attributes: The attributes to render this native ad template with.
+ @param nativeBannerAd The native banner ad to use to create this view.
+ @param type The type of this native banner ad template. For more information, consult FBNativeAdBannerViewType.
+ @param attributes The attributes to render this native ad template with.
  */
 + (instancetype)nativeBannerAdViewWithNativeBannerAd:(FBNativeBannerAd *)nativeBannerAd withType:(FBNativeBannerAdViewType)type withAttributes:(FBNativeAdViewAttributes *)attributes;
 
@@ -69,7 +71,7 @@ FB_CLASS_EXPORT
 /**
  Returns default attributes for a given type.
 
- - Parameter type: The type for this layout.
+ @param type The type for this layout.
  */
 + (instancetype)defaultAttributesForBannerType:(FBNativeBannerAdViewType)type;
 

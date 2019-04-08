@@ -42,9 +42,9 @@ FB_CLASS_EXPORT
 /**
  This is a method to initialize an FBAdImage.
 
- - Parameter url: the image url.
- - Parameter width: the image width.
- - Parameter height: the image height.
+ @param url the image url.
+ @param width the image width.
+ @param height the image height.
  */
 - (instancetype)initWithURL:(NSURL *)url
                       width:(NSInteger)width
@@ -53,7 +53,7 @@ FB_CLASS_EXPORT
 /**
  Loads an image from self.url over the network, or returns the cached image immediately.
 
- - Parameter block: Block to handle the loaded image.
+ @param block Block to handle the loaded image.
  */
 - (void)loadImageAsyncWithBlock:(nullable void (^)(UIImage * __nullable image))block;
 

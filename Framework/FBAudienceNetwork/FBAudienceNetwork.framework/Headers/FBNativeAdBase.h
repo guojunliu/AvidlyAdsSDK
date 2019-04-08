@@ -18,7 +18,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import <FBAudienceNetwork/FBAdExtraHint.h>
+
 #import "FBAdSettings.h"
+
+typedef NS_ENUM(NSInteger, FBAdFormatType) {
+    FBAdFormatTypeUnknown = 0,
+    FBAdFormatTypeImage,
+    FBAdFormatTypeVideo,
+    FBAdFormatTypeCarousel,
+};
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -48,10 +57,6 @@ typedef NS_ENUM(NSInteger, FBNativeAdsCachePolicy) {
  Typed access to the id of the ad placement.
  */
 @property (nonatomic, copy, readonly) NSString *placementID;
-/**
- Typed access to the ad star rating. See `FBAdStarRating` for details.
- */
-@property (nonatomic, assign, readonly) struct FBAdStarRating starRating FB_DEPRECATED;
 /**
  Typed access to the headline that the advertiser entered when they created their ad. This is usually the ad's main title.
  */
@@ -108,7 +113,10 @@ typedef NS_ENUM(NSInteger, FBNativeAdsCachePolicy) {
  Typed access to the AdChoices text, usually a localized version of "AdChoices". See `FBAdChoicesView` for an included implementation.
  */
 @property (nonatomic, copy, readonly, nullable) NSString *adChoicesText;
-
+/**
+ Typed access to the ad format type. See `FBAdFormatType` enum for more details.
+ */
+@property (nonatomic, assign, readonly) FBAdFormatType adFormatType;
 /**
  Read only access to native ad caching policy, it is set in loadAWithMediaCachePolicy:
  */
@@ -120,10 +128,11 @@ typedef NS_ENUM(NSInteger, FBNativeAdsCachePolicy) {
  */
 @property (nonatomic, getter=isAdValid, readonly) BOOL adValid;
 
-@property (nonatomic, copy, readonly, nullable, getter=getAdNetwork) NSString *adNetwork;
-
 @property (nonatomic, getter=isRegistered, readonly) BOOL registered;
-
+/**
+ FBAdExtraHint to provide extra info
+ */
+@property (nonatomic, strong, nullable) FBAdExtraHint *extraHint;
 /**
  This is a method to disconnect a FBNativeAd with the UIView you used to display the native ads.
  */
@@ -143,7 +152,7 @@ typedef NS_ENUM(NSInteger, FBNativeAdsCachePolicy) {
  You can implement `nativeAdDidLoad:` and `nativeAd:didFailWithError:` methods
  of `FBNativeAdDelegate` if you would like to be notified as loading succeeds or fails.
 
- - Parameter mediaCachePolicy: controls which media (images, video, etc) from the native ad are cached before the native ad calls nativeAdLoaded on its delegate. The default is to cache everything.
+ @param mediaCachePolicy controls which media (images, video, etc) from the native ad are cached before the native ad calls nativeAdLoaded on its delegate. The default is to cache everything.
  Note that impression is not logged until the media for the ad is visible on screen (Video or Image for FBNativeAd / Icon for FBNativeBannerAd) and setting this to anything else than FBNativeAdsCachePolicyAll
  will delay the impression call.
  */
@@ -152,16 +161,16 @@ typedef NS_ENUM(NSInteger, FBNativeAdsCachePolicy) {
 /**
  Begins loading the FBNativeAd content from a bid payload attained through a server side bid.
 
- - Parameter bidPayload: The payload of the ad bid. You can get your bid payload from Facebook bidder endpoint.
+ @param bidPayload The payload of the ad bid. You can get your bid payload from Facebook bidder endpoint.
  */
 - (void)loadAdWithBidPayload:(NSString *)bidPayload;
 
 /**
  Begins loading the FBNativeAd content from a bid payload attained through a server side bid.
 
- - Parameter bidPayload: The payload of the ad bid. You can get your bid payload from Facebook bidder endpoint.
+ @param bidPayload The payload of the ad bid. You can get your bid payload from Facebook bidder endpoint.
 
- - Parameter mediaCachePolicy: controls which media (images, video, etc) from the native ad are cached before the native ad calls nativeAdLoaded on its delegate. The default is to cache everything.
+ @param mediaCachePolicy controls which media (images, video, etc) from the native ad are cached before the native ad calls nativeAdLoaded on its delegate. The default is to cache everything.
  Note that impression is not logged until the media for the ad is visible on screen (Video or Image for FBNativeAd / Icon for FBNativeBannerAd) and setting this to anything else than FBNativeAdsCachePolicyAll
  will delay the impression call.
  */

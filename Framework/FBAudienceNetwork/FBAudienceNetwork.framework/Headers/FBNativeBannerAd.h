@@ -20,17 +20,15 @@
 
 #import <FBAudienceNetwork/FBAdDefines.h>
 #import <FBAudienceNetwork/FBAdSettings.h>
-#import <FBAudienceNetwork/FBAdStarRatingView.h>
 #import <FBAudienceNetwork/FBNativeAdBase.h>
 
 #import "FBAdImage.h"
-#import "FBAdStarRatingView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol FBNativeBannerAdDelegate;
 
-@class FBAdIconView;
+@class FBMediaView;
 
 /**
  The FBNativeBannerAd represents ad metadata to allow you to construct custom ad views.
@@ -46,31 +44,31 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED
 /**
  This is a method to associate a FBNativeBannerAd with the UIView you will use to display the native ads.
 
- - Parameter view: The UIView you created to render all the native ads data elements.
- - Parameter iconView: The FBAdIconView you created to render the icon
- - Parameter viewController: The UIViewController that will be used to present SKStoreProductViewController
+ @param view The UIView you created to render all the native ads data elements.
+ @param iconView The FBMediaView you created to render the icon
+ @param viewController The UIViewController that will be used to present SKStoreProductViewController
  (iTunes Store product information) or the in-app browser. If nil is passed, the top view controller currently shown will be used.
 
 
  The whole area of the UIView will be clickable.
  */
 - (void)registerViewForInteraction:(UIView *)view
-                          iconView:(FBAdIconView *)iconView
+                          iconView:(FBMediaView *)iconView
                     viewController:(nullable UIViewController *)viewController;
 
 /**
  This is a method to associate FBNativeBannerAd with the UIView you will use to display the native ads
  and set clickable areas.
 
- - Parameter view: The UIView you created to render all the native ads data elements.
- - Parameter iconView: The FBAdIconView you created to render the icon
- - Parameter viewController: The UIViewController that will be used to present SKStoreProductViewController
+ @param view The UIView you created to render all the native ads data elements.
+ @param iconView The FBMediaView you created to render the icon
+ @param viewController The UIViewController that will be used to present SKStoreProductViewController
  (iTunes Store product information). If nil is passed, the top view controller currently shown will be used.
- - Parameter clickableViews: An array of UIView you created to render the native ads data element, e.g.
+ @param clickableViews An array of UIView you created to render the native ads data element, e.g.
  CallToAction button, Icon image, which you want to specify as clickable.
  */
 - (void)registerViewForInteraction:(UIView *)view
-                          iconView:(FBAdIconView *)iconView
+                          iconView:(FBMediaView *)iconView
                     viewController:(nullable UIViewController *)viewController
                     clickableViews:(nullable NSArray<UIView *> *)clickableViews;
 
@@ -93,7 +91,7 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED
 /**
  Sent when an FBNativeBannerAd has been successfully loaded.
 
- - Parameter nativeBannerAd: An FBNativeBannerAd object sending the message.
+ @param nativeBannerAd An FBNativeBannerAd object sending the message.
  */
 - (void)nativeBannerAdDidLoad:(FBNativeBannerAd *)nativeBannerAd;
 
@@ -105,22 +103,22 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED
 /**
  Sent immediately before the impression of an FBNativeBannerAd object will be logged.
 
- - Parameter nativeBannerAd: An FBNativeBannerAd object sending the message.
+ @param nativeBannerAd An FBNativeBannerAd object sending the message.
  */
 - (void)nativeBannerAdWillLogImpression:(FBNativeBannerAd *)nativeBannerAd;
 
 /**
  Sent when an FBNativeBannerAd is failed to load.
 
- - Parameter nativeBannerAd: An FBNativeBannerAd object sending the message.
- - Parameter error: An error object containing details of the error.
+ @param nativeBannerAd An FBNativeBannerAd object sending the message.
+ @param error An error object containing details of the error.
  */
 - (void)nativeBannerAd:(FBNativeBannerAd *)nativeBannerAd didFailWithError:(NSError *)error;
 
 /**
  Sent after an ad has been clicked by the person.
 
- - Parameter nativeBannerAd: An FBNativeBannerAd object sending the message.
+ @param nativeBannerAd An FBNativeBannerAd object sending the message.
  */
 - (void)nativeBannerAdDidClick:(FBNativeBannerAd *)nativeBannerAd;
 
@@ -129,7 +127,7 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED
  interaction with the modal view and dismiss it, this message will be sent, returning control
  to the application.
 
- - Parameter nativeBannerAd: An FBNativeBannerAd object sending the message.
+ @param nativeBannerAd An FBNativeBannerAd object sending the message.
  */
 - (void)nativeBannerAdDidFinishHandlingClick:(FBNativeBannerAd *)nativeBannerAd;
 

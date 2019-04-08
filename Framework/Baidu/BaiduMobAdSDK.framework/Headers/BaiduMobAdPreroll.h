@@ -14,7 +14,7 @@
 /**
  *  委托对象
  */
-@property (nonatomic ,assign) id<BaiduMobAdPrerollDelegate> delegate;
+@property (nonatomic ,weak) id<BaiduMobAdPrerollDelegate> delegate;
 /**
  *  应用的APPID
  */

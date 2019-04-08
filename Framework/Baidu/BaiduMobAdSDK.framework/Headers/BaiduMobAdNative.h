@@ -23,16 +23,16 @@
 /**
  * 原生广告delegate
  */
-@property (nonatomic ,assign) id<BaiduMobAdNativeAdDelegate> delegate;
+@property (nonatomic ,weak) id<BaiduMobAdNativeAdDelegate> delegate;
 
 /**
  * 模版高度，仅用于信息流模版广告
  */
-@property (nonatomic ,retain)  NSNumber *height ;
+@property (nonatomic ,retain)  NSNumber *baiduMobAdsHeight ;
 /**
  * 模版宽度，仅用于信息流模版广告
  */
-@property (nonatomic ,retain)  NSNumber *width ;
+@property (nonatomic ,retain)  NSNumber *baiduMobAdsWidth ;
 
 
 /**

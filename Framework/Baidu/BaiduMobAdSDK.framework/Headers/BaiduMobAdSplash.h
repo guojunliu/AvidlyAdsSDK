@@ -14,7 +14,7 @@
 /**
  *  委托对象
  */
-@property (nonatomic ,assign) id<BaiduMobAdSplashDelegate> delegate;
+@property (nonatomic ,weak) id<BaiduMobAdSplashDelegate> delegate;
 
 
 /**

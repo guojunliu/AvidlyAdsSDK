@@ -10,16 +10,6 @@
 #import "BaiduMobAdDelegateProtocol.h"
 #import <UIKit/UIKit.h>
 
-#define kBaiduAdViewSizeDefaultWidth 320
-#define kBaiduAdViewSizeDefaultHeight 48
-
-#define kBaiduAdViewBanner320x48 CGSizeMake(320, 48)
-#define kBaiduAdViewBanner468x60 CGSizeMake(468, 60)
-#define kBaiduAdViewBanner728x90 CGSizeMake(728, 90)
-
-#define kBaiduAdViewSquareBanner300x250 CGSizeMake(300, 250)
-#define kBaiduAdViewSquareBanner600x500 CGSizeMake(600, 500)
-
 /**
  *  投放广告的视图接口,更多信息请查看[百度移动联盟主页](http://mssp.baidu.com)
  */
@@ -35,7 +25,7 @@ typedef enum _BaiduMobAdViewType {
 /**
  *  委托对象
  */
-@property(nonatomic, assign) id<BaiduMobAdViewDelegate> delegate;
+@property(nonatomic, weak) id<BaiduMobAdViewDelegate> delegate;
 
 /**
  *  设置／获取需要展示的广告类型

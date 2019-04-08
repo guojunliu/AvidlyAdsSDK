@@ -63,6 +63,7 @@ typedef NS_ENUM(NSInteger, FBAdBidAuctionType) {
  */
 + (void)getAudienceNetworkBidForAppID:(NSString *)appID
                           placementID:(NSString *)placementID
+                           platformID:(NSString *)platformID
                              adFormat:(FBAdBidFormat)bidAdFormat
                      responseCallback:(void(^)(FBAdBidResponse *bidResponse))callback;
 
@@ -73,6 +74,7 @@ typedef NS_ENUM(NSInteger, FBAdBidAuctionType) {
  */
 + (void)getAudienceNetworkBidForAppID:(NSString *)appID
                           placementID:(NSString *)placementID
+                           platformID:(NSString *)platformID
                              adFormat:(FBAdBidFormat)bidAdFormat
                          maxTimeoutMS:(NSInteger)maxTimeoutMS
                                 coppa:(BOOL)coppa // Children's Online Privacy Protection Act (COPPA) TRUE(1)=child-directed, FALSE(0)=normal (default)
@@ -85,6 +87,7 @@ typedef NS_ENUM(NSInteger, FBAdBidAuctionType) {
  */
 + (void)getAudienceNetworkTestBidForAppID:(NSString *)appID
                               placementID:(NSString *)placementID
+                               platformID:(NSString *)platformID
                                  adFormat:(FBAdBidFormat)bidAdFormat
                              maxTimeoutMS:(NSInteger)maxTimeoutMS
                          responseCallback:(void(^)(FBAdBidResponse *bidResponse))callback;
