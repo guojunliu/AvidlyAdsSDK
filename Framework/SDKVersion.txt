@@ -1,4 +1,4 @@
-UPSDK			3.0.06.7
+UPSDK			3.0.07.1
 AdColony		3.3.5
 AppLovin		5.0.1
 Amazon			2.2.15
@@ -6,7 +6,7 @@ Baidu			4.6
 BatMobi			2.4.5
 Chartboost		7.2.0
 FBAudienceNetwork	5.1.1
-GDT			4.8.1
+GDT			4.8.7
 GoogleMobileAds		7.32.88
 IronSource		6.7.9
 Maio			1.2.18
@@ -17,4 +17,4 @@ OneWay			2.1.0
 PlayableAds		1.0.7
 Unity			3.0.0
 Vungle			6.2.0
-Toutiao			1.9.6
+Toutiao			2.0.0
