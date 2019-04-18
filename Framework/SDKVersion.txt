@@ -18,3 +18,4 @@ PlayableAds		1.0.7
 Unity			3.0.0
 Vungle			6.2.0
 Toutiao			2.0.0
+Sigmob			2.5.0
