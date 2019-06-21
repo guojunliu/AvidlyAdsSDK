@@ -1,13 +1,10 @@
 //
 //  ALSdkSettings.h
 //
-//  Copyright (c) 2013, AppLovin Corporation. All rights reserved.
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
-
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * This class contains settings for the AppLovin SDK.
@@ -44,4 +41,4 @@ AL_ASSUME_NONNULL_BEGIN
 @property (copy, atomic) NSString *autoPreloadAdTypes __deprecated_msg("Manually managing what ads SDK should automatically preload has been deprecated and will be removed in a future SDK version.");
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

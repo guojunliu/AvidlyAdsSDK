@@ -14,7 +14,7 @@
 @interface BaiduMobAdNativeAdView : UIView 
 
 /**
- * 初始化，非视频信息流，MaterialType是NORMAL的初始化方法
+ * 初始化，非视频信息流，BaiduMobMaterialType是NORMAL的初始化方法
  * 添加品牌名称brandName
  */
 -(id)initWithFrame:(CGRect)frame
@@ -25,7 +25,7 @@
          mainImage:(UIImageView *) mainView;
 
 /**
- * 如果MaterialType是VIDEO的初始化方法
+ * 如果BaiduMobMaterialType是VIDEO的初始化方法
  * 添加品牌名称brandName
  1.开发者可用百度自带播放器组建BaiduMobAdNativeVideoView渲染，并传入视频view
  2.开发者可使用自己的视频播放控件渲染，并传入视频view
@@ -38,7 +38,7 @@
          mainImage:(UIImageView *) mainView
          videoView:(BaiduMobAdNativeVideoBaseView *) videoView;
 /**
- * 如果MaterialType是HTML的初始化方法
+ * 如果BaiduMobMaterialType是HTML的初始化方法
  */
 -(id)initWithFrame:(CGRect)frame
            webview:(BaiduMobAdNativeWebView *) webView;

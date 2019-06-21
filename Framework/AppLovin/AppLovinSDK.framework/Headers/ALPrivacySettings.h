@@ -3,12 +3,10 @@
 //  AppLovinSDK
 //
 //  Created by Basil Shikin on 3/26/18.
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
-
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * This class contains privacy settings for AppLovin.
@@ -44,4 +42,4 @@ AL_ASSUME_NONNULL_BEGIN
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

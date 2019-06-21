@@ -35,6 +35,12 @@
 
 - (void)adapter:(id<WindRewardVideoAdAdapter>)rewardVideoAdAdapter didPlayRewardVideoAdwithError:(NSError *)error placementId:(NSString *)placementId;
 
+- (void)adapterDidCompletePlayingRewardVideoAd:(id<WindRewardVideoAdAdapter>)rewardVideoAdAdapter placementId:(NSString *)placementId;
+
+- (void)adapterRewardedVideoAdServerDidSucceed:(id<WindRewardVideoAdAdapter>)rewardVideoAdAdapter placementId:(NSString *)placementId;
+
+- (void)adapterRewardedVideoAdServerDidFail:(id<WindRewardVideoAdAdapter>)rewardVideoAdAdapter placementId:(NSString *)placementId;
+
 @end
 
 

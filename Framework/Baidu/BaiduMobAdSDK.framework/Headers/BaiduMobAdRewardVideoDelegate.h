@@ -16,38 +16,43 @@
 @optional
 #pragma mark - 视频缓存delegate
 /**
- *  视频预加载缓存成功
+ *  视频加载缓存成功
  */
-- (void)videoPreloadSuccess:(BaiduMobAdRewardVideo *)video;
+- (void)rewardedVideoAdLoaded:(BaiduMobAdRewardVideo *)video;
 
 /**
- *  视频预加载缓存失败
+ *  视频加载缓存失败
  */
-- (void)videoPreloadFail:(BaiduMobAdRewardVideo *)video withError:(BaiduMobFailReason)reason;
+- (void)rewardedVideoAdLoadFailed:(BaiduMobAdRewardVideo *)video withError:(BaiduMobFailReason)reason;
 
 #pragma mark - 视频播放delegate
 
 /**
+ *  视频开始播放
+ */
+- (void)rewardedVideoAdDidStarted:(BaiduMobAdRewardVideo *)video;
+
+/**
  *  广告展示失败
  */
-- (void)videoFailPresentScreen:(BaiduMobAdRewardVideo *)video withError:(BaiduMobFailReason)reason;
+- (void)rewardedVideoAdShowFailed:(BaiduMobAdRewardVideo *)video withError:(BaiduMobFailReason)reason;
 
 /**
  *  广告完成播放
  */
-- (void)videoDidFinishPlayingMedia:(BaiduMobAdRewardVideo *)video;
+- (void)rewardedVideoAdDidPlayFinish:(BaiduMobAdRewardVideo *)video;
 
 /**
- *  用户点击关闭/跳过
+ *  用户点击关闭
  @param progress 当前播放进度 单位百分比 （注意浮点数）
  */
-- (void)userDidSkipPlayingMedia:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
+- (void)rewardedVideoAdDidClose:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
 
 /**
  *  用户点击下载/查看详情
  @param progress 当前播放进度 单位百分比
  */
-- (void)userDidClickLP:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
+- (void)rewardedVideoAdDidClick:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
 
 @end
 

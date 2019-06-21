@@ -1,49 +1,58 @@
 //
-//  AppLovinSdk.h
+//  ALSdk.h
 //
 //  Created by Basil Shikin on 2/1/12.
-//  Copyright (c) 2013, AppLovin Corporation. All rights reserved.
+//  Copyright © 2018 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 #import "ALSdkSettings.h"
 #import "ALAdService.h"
 #import "ALNativeAdService.h"
 #import "ALPostbackService.h"
 #import "ALEventService.h"
-
-#import "ALAnnotations.h"
+#import "ALVariableService.h"
+#import "ALUserService.h"
+#import "ALSdkConfiguration.h"
 #import "ALErrorCodes.h"
 #import "ALMediationProvider.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * This is a base class for the AppLovin iOS SDK.
  */
 @interface ALSdk : NSObject
 
-/**
- * @name SDK Configuration
- */
+#pragma mark - High Level SDK Properties
 
 /**
- * This SDK's key.
+ * The current version of the SDK.
  */
-@property (strong, nonatomic, readonly) NSString *sdkKey;
+@property (class, nonatomic, copy, readonly) NSString *version;
 
 /**
- * This SDK's settings.
+ * The current version of the SDK in numeric format.
  */
-@property (strong, nonatomic, readonly) ALSdkSettings *settings;
+@property (class, nonatomic, assign, readonly) NSUInteger versionCode;
 
 /**
- * Set plugin version.
- *
- * This is mainly used internally, however if you've written a mediation adaptor or plugin,
- * you can set this. Common examples include things like "Cocos2D Plugin v1.0".
+ * This SDK's SDK key.
+ */
+@property (nonatomic, copy, readonly) NSString *sdkKey;
+
+/**
+ * This SDK's SDK settings.
+ */
+@property (nonatomic, strong, readonly) ALSdkSettings *settings;
+
+/**
+ * Get the SDK configuration object provided upon initialization.
+ */
+@property (nonatomic, strong, readonly) ALSdkConfiguration *configuration;
+
+/**
+ * Set plugin version for mediation adapter or plugin.
  *
  * @param pluginVersion Some descriptive string which identifies the plugin.
  */
@@ -52,37 +61,14 @@ AL_ASSUME_NONNULL_BEGIN
 /**
  * Set mediation provider using one of the provided strings in ALMediationProvider.h, or your own if not defined.
  */
-@property (atomic, copy, alnullable) NSString *mediationProvider;
+@property (nonatomic, copy, nullable) NSString *mediationProvider;
+
+#pragma mark - SDK Services
 
 /**
- * @name SDK Information
+ * This service is used to load and display ads from AppLovin servers.
  */
-
-/**
- * Get the current version of the SDK.
- *
- * @return The current SDK version.
- */
-+ (NSString *)version;
-
-/**
- * Get the current version of the SDK in numeric format.
- *
- * @return The current SDK version in numeric format.
- */
-+ (NSUInteger)versionCode;
-
-/**
- * @name SDK Services
- */
-
-/**
- * Get an instance of AppLovin Ad service. This service is
- * used to fetch and display ads from AppLovin servers.
- *
- * @return Ad service. Guaranteed not to be null.
- */
-@property (strong, nonatomic, readonly) ALAdService *adService;
+@property (nonatomic, strong, readonly) ALAdService *adService;
 
 /**
  * Get an instance of AppLovin Native Ad service. This service is
@@ -90,84 +76,109 @@ AL_ASSUME_NONNULL_BEGIN
  *
  * @return Native ad service. Guaranteed not to be null.
  */
-@property (strong, nonatomic, readonly) ALNativeAdService *nativeAdService;
+@property (nonatomic, strong, readonly) ALNativeAdService *nativeAdService;
 
 /**
  * Get an instance of the AppLovin postback service. This service is used to dispatch HTTP GET postbacks to arbitrary URLs.
  *
  * @return Postback service. Guaranteed not to be null.
  */
-@property (strong, nonatomic, readonly) ALPostbackService *postbackService;
+@property (nonatomic, strong, readonly) ALPostbackService *postbackService;
 
 /**
  * Get an instance of the AppLovin event service. This service is used to track post-install user events.
  *
  * @return Event service. Guaranteed not to be null.
  */
-@property (strong, nonatomic, readonly) ALEventService *eventService;
+@property (nonatomic, strong, readonly) ALEventService *eventService;
 
 /**
- * Set a string which identifies the current user, which will be passed through to your server via our optional S2S postbacks.
+ * Service object for performing user-related tasks.
  *
- * If you're using reward validation, you can optionally set a user identifier to be included with
- * currency validation postbacks. For example, a user name. We'll include this in the postback when we
- * ping your currency endpoint from our server.
+ * @return User service. Guaranteed not to be null.
  */
-@property (copy, nonatomic, alnullable) NSString *userIdentifier;
+@property (nonatomic, strong, readonly) ALUserService *userService;
 
 /**
- * @name SDK Initialization
- */
-
-/**
- * Initialize current version of the SDK.
+ * Get an instance of the AppLovin variable service. This service is used to perform various AB tests that you have set up on your AppLovin dashboard on your users.
  *
+ * @return Variable service. Guaranteed not to be null.
+ */
+@property (nonatomic, strong, readonly) ALVariableService *variableService;
+
+/**
+ * Set an identifier for the current user. This identifier will be tied to SDK events and our optional S2S postbacks.
+ *
+ * If you're using reward validation, you can optionally set an identifier to be included with currency validation postbacks.
+ * For example, a username or email. We'll include this in the postback when we ping your currency endpoint from our server.
+ */
+@property (nonatomic, copy, nullable) NSString *userIdentifier;
+
+#pragma mark - SDK Initialization
+
+typedef void (^ALSdkInitializationCompletionHandler)(ALSdkConfiguration *configuration);
+
+/**
+ * Initialize the SDK.
  */
 - (void)initializeSdk;
 
 /**
+ * Initialize the SDK with a given completion block.
+ *
+ * The callback will be invoked on the main thread.
+ *
+ * @param completionHandler The callback that will be run when the SDK finishes initializing.
+ */
+- (void)initializeSdkWithCompletionHandler:(nullable ALSdkInitializationCompletionHandler)completionHandler;
+
+/**
  * Initialize the default instance of AppLovin SDK.
  *
- * Please make sure that application's
- * <code>Info.plist</code> includes a property 'AppLovinSdkKey' that is set to provided SDK key.
+ * Please make sure your SDK key is set in the application's Info.plist under the property 'AppLovinSdkKey'.
  */
 + (void)initializeSdk;
 
 /**
- * @name Getting SDK Instances
+ * Initialize the default instance of AppLovin SDK.
+ *
+ * Please make sure your SDK key is set in the application's Info.plist under the property 'AppLovinSdkKey'.
+ *
+ * @param completionHandler The callback that will be run when the SDK finishes initializing.
  */
++ (void)initializeSdkWithCompletionHandler:(nullable ALSdkInitializationCompletionHandler)completionHandler;
 
 /**
  * Get a shared instance of AppLovin SDK.
  *
- * Please make sure that application's
- * <code>Info.plist</code> includes a property 'AppLovinSdkKey' that is set to provided SDK key.
+ * Please make sure your SDK key is set in the application's Info.plist under the property 'AppLovinSdkKey'.
  *
- * @return An instance of AppLovinSDK
+ * @return The shared instance of AppLovin's SDK, or nil if SDK key is not set in the application's Info.plist.
  */
-+ (alnullable ALSdk *)shared;
++ (nullable ALSdk *)shared;
 
 /**
- * Get an instance of AppLovin SDK using default SDK settings.
+ * Get an instance of AppLovin SDK using the provided SDK key.
  *
- * @param sdkKey         SDK key to use. Must not be nil.
+ * @param sdkKey SDK key to use for the instance of the AppLovin SDK.
  *
- * @return An instance of AppLovinSDK
+ * @return An instance of AppLovinSDK, or nil if SDK key is not set.
  */
-+ (alnullable ALSdk *)sharedWithKey:(NSString *)sdkKey;
++ (nullable ALSdk *)sharedWithKey:(NSString *)sdkKey;
 
 /**
- * Get an instance of AppLovin SDK.
- * 
- * @param sdkKey         SDK key to use. Must not be nil.
- * @param settings       User-provided settings. Must not be nil, but can be an empty <code>[[ALSdkSettings alloc] init]</code> object.
- * 
- * @return An instance of AppLovinSDK
+ * Get an instance of AppLovin SDK using the provided SDK key and SDK settings.
+ *
+ * @param sdkKey    SDK key to use for the instance of the AppLovin SDK.
+ * @param settings  SDK settings object.
+ *
+ * @return An instance of AppLovinSDK, or nil if SDK key is not set.
  */
-+ (alnullable ALSdk *)sharedWithKey:(NSString *)sdkKey settings:(ALSdkSettings *)settings;
++ (nullable ALSdk *)sharedWithKey:(NSString *)sdkKey settings:(ALSdkSettings *)settings;
 
-- (id)init __attribute__((unavailable("Use [ALSdk shared] instead of alloc-init pattern.")));
+
+- (instancetype)init __attribute__((unavailable("Use +[ALSdk shared], +[ALSdk sharedWithKey:], or +[ALSdk sharedWithKey:settings:].")));
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

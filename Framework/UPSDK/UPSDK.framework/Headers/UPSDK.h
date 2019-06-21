@@ -1,31 +1,30 @@
 //
 //  UPSDK.h
-//  AvidlyAdsSDK
+//  UPSDK
 //
-//  Created by steve on 2018/4/16.
-//  Copyright © 2018年 liuguojun. All rights reserved.
+//  Created by steve on 2017/4/20.
+//  Copyright © 2017年 liuguojun. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import "UPBannerBaseWrapper.h"
 #import "UPBannerStripWrapper.h"
 #import "UPBannerRectangleWrapper.h"
+
 #import "UPIntersitialWrapper.h"
 #import "UPInterstitialDebug.h"
+
 #import "UPRewardWrapper.h"
 #import "UPRewardDebug.h"
+
+#import "UPIconWrapper.h"
+#import "UPWallWrapper.h"
+
 #import "UPSDKVersion.h"
 #import "UPSDKGlobalZone.h"
 #import "UPAccessPrivacyInfoStatusEnum.h"
-#import "UPIconWrapper.h"
-
-#import "AvidlyAdsSDK.h"
-#import "AvidlyIntersitialWrapper.h"
-#import "AvidlyRewardWrapper.h"
-#import "AvidlyAdsWallWrapper.h"
-#import "AvidlyAdsGlobalZone.h"
-#import "AvidlyAdsSDKVersion.h"
 
 @interface UPSDK : NSObject
 
@@ -36,7 +35,7 @@
 
 /**
  初始化SDK（根据发行区域）
- 
+
  @param zone 发行区域
  */
 + (void)initSDK:(UPSDKGlobalZone)zone;
@@ -70,18 +69,18 @@
  */
 + (NSString *)getAdConfigJsonStrWithPlacementID:(NSString *)placementID;
 
-+ (void)loadAvidlyAdsByManual;
++ (void)loadUPAdsByManual;
 
 /**
  更新访问用户隐私信息状态
- 
+
  @param status 访问用户隐私信息状态，不能传UPAccessPrivacyInfoStatusNone
  */
 + (void)updateAccessPrivacyInfoStatus:(UPAccessPrivacyInfoStatus)status;
 
 /**
  使用弹窗向用户请求访问隐私信息授权
- 
+
  @param viewController 当前视图控制器
  @param completionBlock 回调，其中isAccepted为YES表示用户同意使用隐私信息，为NO表示用户不同意使用隐私信息
  */
@@ -89,14 +88,14 @@
 
 /**
  获取当前访问用户隐私信息状态
- 
+
  @return 访问用户隐私信息状态
  */
 + (UPAccessPrivacyInfoStatus)getCurrentAccessPrivacyInfoStatus;
 
 /**
  查询用户是否是欧盟用户
- 
+
  @param completionBlock 回调 isEuropeanUnion为YES表示是欧盟用户
  */
 + (void)checkIsEuropeanUnionUser:(void (^)(BOOL isEuropeanUnion))completionBlock;

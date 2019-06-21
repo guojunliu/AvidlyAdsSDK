@@ -25,8 +25,6 @@
 #import <WindSDK/WindSplashAd.h>
 #import <WindSDK/WindSplashAdAdapter.h>
 #import <WindSDK/WindSplashAdConnector.h>
-#import <WindSDK/WindDriftAd.h>
-#import <WindSDK/WindDriftView.h>
 
 
 

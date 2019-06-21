@@ -16,13 +16,13 @@ typedef NS_ENUM(NSUInteger, UPStripShowLocationType) {
 
 @interface UPBannerStripWrapper : UPBannerBaseWrapper
 
-- (instancetype)initWithPlacement:(NSString *)avidPlacement controller:(UIViewController*)vc;
+- (instancetype)initWithPlacement:(NSString *)placement controller:(UIViewController*)vc;
 
-- (instancetype)initWithPlacement:(NSString *)avidPlacement controller:(UIViewController*)vc size:(CGSize)size;
+- (instancetype)initWithPlacement:(NSString *)placement controller:(UIViewController*)vc size:(CGSize)size;
 
-- (instancetype)initWithPlacement:(NSString *)avidPlacement controller:(UIViewController*)vc showLocation:(UPStripShowLocationType)type;
+- (instancetype)initWithPlacement:(NSString *)placement controller:(UIViewController*)vc showLocation:(UPStripShowLocationType)type;
 
-- (instancetype)initWithPlacement:(NSString *)avidPlacement controller:(UIViewController*)vc size:(CGSize)size showLocation:(UPStripShowLocationType)type;
+- (instancetype)initWithPlacement:(NSString *)placement controller:(UIViewController*)vc size:(CGSize)size showLocation:(UPStripShowLocationType)type;
 
 
 @end

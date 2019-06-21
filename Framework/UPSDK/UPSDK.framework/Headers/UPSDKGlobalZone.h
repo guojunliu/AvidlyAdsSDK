@@ -1,6 +1,6 @@
 //
 //  UPSDKAdsGlobalZone.h
-//  AvidlyAdsSDK
+//  UPSDK
 //
 //  Created by steve on 2018/4/16.
 //  Copyright © 2018年 liuguojun. All rights reserved.

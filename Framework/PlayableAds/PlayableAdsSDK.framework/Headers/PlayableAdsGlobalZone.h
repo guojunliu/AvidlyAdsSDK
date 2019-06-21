@@ -1,6 +1,6 @@
 //
 //  PlayableAdsGlobalZone.h
-//  VideoGame
+//  
 //
 //  Created by dgaf on 2017/9/5.
 //  Copyright © 2017年 dgaf. All rights reserved.

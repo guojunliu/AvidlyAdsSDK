@@ -1,9 +1,9 @@
 //
 //  UPRewardWrapper.h
-//  UP
+//  UPSDK
 //
-//  Created by steve on 2018/4/16.
-//  Copyright © 2018年 liuguojun. All rights reserved.
+//  Created by steve on 2017/4/22.
+//  Copyright © 2017年 liuguojun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -38,6 +38,8 @@
 - (BOOL)show:(UIViewController *)viewController placeId:(NSString*)adId;
 
 - (void)load:(id<UPRewardLoadDelegate>)delegate;
+
+- (void)debugOnlineLog:(NSString *)key msg:(NSString *)msg;
 
 @end
 

@@ -2,8 +2,8 @@
 //  UPIntersitialWrapper.h
 //  UPSDK
 //
-//  Created by steve on 2018/4/16.
-//  Copyright © 2018年 liuguojun. All rights reserved.
+//  Created by steve on 2017/4/18.
+//  Copyright © 2017年 liuguojun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -14,9 +14,9 @@
 
 @interface UPIntersitialWrapper : NSObject
 
-- (instancetype)initAvidPlacement:(NSString *)avidPlacement;
+- (instancetype)initPlacement:(NSString *)placement;
 
-- (NSString *)getAvidPlacement;
+- (NSString *)getPlacement;
 
 - (void)setDelegate:(id<UPIntersitialDelegate>)delegate;
 
@@ -25,6 +25,8 @@
 - (BOOL)show:(UIViewController *)viewController;
 
 - (void)load:(id<UPIntersitialLoadDelegate>)loadDelegate;
+
+- (void)onlineReportDebug:(NSString *)eid placeId: placeid msg:(NSString *)msg;
 
 @end
 
@@ -57,14 +59,14 @@
 
 /**
  插屏广告加载成功
- 
+
  @param interstitialAd 插屏广告
  */
 - (void)interstitialAdDidLoad:(UPIntersitialWrapper *)interstitialAd;
 
 /**
  插屏广告加载失败
- 
+
  @param interstitialAd 插屏广告
  */
 - (void)interstitialAdDidLoadFail:(UPIntersitialWrapper *)interstitialAd;

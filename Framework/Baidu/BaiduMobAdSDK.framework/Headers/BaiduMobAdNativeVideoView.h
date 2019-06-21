@@ -15,7 +15,7 @@
 #define VideoViewAyyay [[NSMutableArray alloc] initWithCapacity:5];
 
 @property (nonatomic, retain)   UIButton *btnLP;//点击查看详情按钮
-
+@property (nonatomic, retain)   UIButton *btnReplay;//重播按钮
 // 初始化方法，需要传入广告返回的BaiduMobAdNativeAdObject
 - (instancetype)initWithFrame:(CGRect)frame andObject:(BaiduMobAdNativeAdObject *)object;
 

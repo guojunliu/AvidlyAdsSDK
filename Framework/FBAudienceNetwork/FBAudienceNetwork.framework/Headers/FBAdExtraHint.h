@@ -79,6 +79,7 @@ FB_CLASS_EXPORT
 
 @property (nonatomic, copy, nullable) NSString *contentURL;
 @property (nonatomic, copy, nullable) NSString *extraData;
+@property (nonatomic, copy, nullable) NSString *mediationData;
 
 - (instancetype)initWithKeywords:(NSArray<FBAdExtraHintKeyword> *)keywords;
 

@@ -13,9 +13,9 @@
 
 @interface UPBannerBaseWrapper : NSObject
 
-- (instancetype)initWithPlacement:(NSString *)avidPlacement controller:(UIViewController*)vc bannerType:(NSInteger) type;
+- (instancetype)initWithPlacement:(NSString *)placement controller:(UIViewController*)vc bannerType:(NSInteger) type;
 
-- (instancetype)initWithPlacement:(NSString *)avidPlacement controller:(UIViewController*)vc size:(CGSize)size bannerType:(NSInteger)type;
+- (instancetype)initWithPlacement:(NSString *)placement controller:(UIViewController*)vc size:(CGSize)size bannerType:(NSInteger)type;
 
 - (void)onlineDebugReportIfNeed:(NSString *)msg placeId:(NSString *)placeid type:(NSInteger)type;
 

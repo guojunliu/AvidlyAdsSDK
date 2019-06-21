@@ -59,7 +59,7 @@
 
 /**
  *  广告加载完成
- *  adType:广告类型 MaterialType
+ *  adType:广告类型 BaiduMobMaterialType
  *  videoDuration:视频时长，仅广告为视频时出现。非视频类广告默认0。 单位ms
  */
 - (void)splashDidReady:(BaiduMobAdSplash *)splash

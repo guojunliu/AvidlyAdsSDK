@@ -12,8 +12,8 @@
 
 @interface UPBannerRectangleWrapper : UPBannerBaseWrapper
 
-- (instancetype)initWithPlacement:(NSString *)avidPlacement controller:(UIViewController*)vc;
+- (instancetype)initWithPlacement:(NSString *)placement controller:(UIViewController*)vc;
 
-- (instancetype)initWithPlacement:(NSString *)avidPlacement controller:(UIViewController*)vc size:(CGSize)size;
+- (instancetype)initWithPlacement:(NSString *)placement controller:(UIViewController*)vc size:(CGSize)size;
 
 @end

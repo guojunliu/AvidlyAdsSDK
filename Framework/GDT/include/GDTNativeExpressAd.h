@@ -72,7 +72,7 @@
 - (void)nativeExpressAdViewDidDissmissScreen:(GDTNativeExpressAdView *)nativeExpressAdView;
 
 /**
- * 原生模板广告点击之后应用进入后台时回调
+ * 详解:当点击应用下载或者广告调用系统程序打开时调用
  */
 - (void)nativeExpressAdViewApplicationWillEnterBackground:(GDTNativeExpressAdView *)nativeExpressAdView;
 
@@ -121,6 +121,11 @@
  *  自动播放时，是否静音。默认 YES。loadAd 前设置。
  */
 @property (nonatomic, assign) BOOL videoMuted;
+
+/**
+ 请求视频的时长上限，有效值范围为[5,30]。
+ */
+@property (nonatomic) NSInteger maxVideoDuration;
 
 /**
  *  构造方法
