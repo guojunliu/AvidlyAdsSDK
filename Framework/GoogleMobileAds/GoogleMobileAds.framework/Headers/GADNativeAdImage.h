@@ -2,13 +2,12 @@
 //  GADNativeAdImage.h
 //  Google Mobile Ads SDK
 //
-//  Copyright 2015 Google Inc. All rights reserved.
+//  Copyright 2015 Google LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
 #import <GoogleMobileAds/GoogleMobileAdsDefines.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly, strong, nullable) UIImage *image;
 
 /// The image's URL.
-@property(nonatomic, readonly, copy) NSURL *imageURL;
+@property(nonatomic, readonly, copy, nullable) NSURL *imageURL;
 
 /// The image's scale.
 @property(nonatomic, readonly, assign) CGFloat scale;

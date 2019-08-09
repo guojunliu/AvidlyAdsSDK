@@ -2,18 +2,19 @@
 //  GADServerSideVerificationOptions.h
 //  Google Mobile Ads SDK
 //
-//  Copyright 2018 Google Inc. All rights reserved.
+//  Copyright 2018 Google LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 /// Options for server-to-server verification callbacks for a rewarded ad.
-@interface GADServerSideVerificationOptions : NSObject<NSCopying>
+@interface GADServerSideVerificationOptions : NSObject <NSCopying>
 
-/// A unique identifier used to identify the user in server-to-server callbacks.
+/// A unique identifier used to identify the user when making server-to-server reward callbacks.
+/// This value will be passed as a parameter of the callback URL to the publisher's server.
 @property(nonatomic, copy, nullable) NSString *userIdentifier;
 
-/// Custom reward string sent in server-to-server callbacks.
+/// Optional custom reward string to include in the server-to-server callback.
 @property(nonatomic, copy, nullable) NSString *customRewardString;
 
 @end
