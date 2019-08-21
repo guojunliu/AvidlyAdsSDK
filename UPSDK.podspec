@@ -22,7 +22,7 @@ UPLTV Ad SDK 3.0.08.1.
 
   s.source_files = 'Framework/GDT/include/*'
   
-  s.resources = "Framework/UPSDK/resource/*", "Framework/AppLovin/resource/*", "Framework/Baidu/resource/*", "Framework/PlayableAds/resource/*", "Framework/Toutiao/resource/*"
+  s.resources = "Framework/UPSDK/resource/*", "Framework/Baidu/resource/*", "Framework/PlayableAds/resource/*", "Framework/Toutiao/resource/*"
 
   s.public_header_files = 'Framework/GDT/include/*'
 
