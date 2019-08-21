@@ -1,4 +1,4 @@
 
 //sdk版本号
-#define UPAdsSDKVERSION  @"3007"
-#define UPAdsSDKBuild    @"6"
+#define UPAdsSDKVERSION  @"3008"
+#define UPAdsSDKBuild    @"1"

@@ -100,4 +100,11 @@
  */
 + (void)checkIsEuropeanUnionUser:(void (^)(BOOL isEuropeanUnion))completionBlock;
 
+/**
+ 当前SDK是否是debug模式
+
+ @return isLogOpened
+ */
++ (BOOL)isLogOpened;
+
 @end
