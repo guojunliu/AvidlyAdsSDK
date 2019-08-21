@@ -11,7 +11,7 @@ typedef NS_ENUM(NSInteger, MTGAdSourceType) {
     MTGAD_SOURCE_API_OFFER = 1,
     MTGAD_SOURCE_MY_OFFER  = 2,
     MTGAD_SOURCE_FACEBOOK  = 3,
-    MTGAD_SOURCE_Mintegral  = 4,
+    MTGAD_SOURCE_Mintegral = 4,
     MTGAD_SOURCE_PUBNATIVE = 5,
     MTGAD_SOURCE_ADMOB     = 6,
     MTGAD_SOURCE_MYTARGET  = 7,
@@ -102,6 +102,9 @@ typedef NS_ENUM(NSInteger, MTGAdTemplateType) {
  @abstract The dataTemplate of the campaign
  */
 @property (nonatomic,assign) MTGAdTemplateType    dataTemplate;
+
+/* The size info about adChoice icon */
+@property (nonatomic) CGSize adChoiceIconSize;
 
 /*!
  @method

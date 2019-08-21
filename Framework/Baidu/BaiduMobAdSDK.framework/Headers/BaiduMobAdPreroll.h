@@ -41,6 +41,11 @@
 @property (nonatomic, assign) BOOL mute;
 
 /**
+ *  使用controller present 落地页
+ */
+@property (nonatomic, strong)  UIViewController *presentAdViewController;
+
+/**
  *  请求广告
  */
 - (void)load;

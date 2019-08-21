@@ -41,4 +41,10 @@
  *  应用启动时展示半屏开屏广告
  */
 - (void)loadAndDisplayUsingContainerView:(UIView *)view;
+
+/**
+ *  使用controller present 落地页
+ */
+@property (nonatomic, strong)  UIViewController *presentAdViewController;
+
 @end

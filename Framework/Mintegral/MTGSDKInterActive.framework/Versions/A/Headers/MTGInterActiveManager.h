@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define MTGInterActiveSDKVersion @"4.3.0"
+#define MTGInterActiveSDKVersion @"5.4.2"
 
 
 typedef NS_ENUM(NSInteger, MTGInterActiveResourceType) {
@@ -65,6 +65,17 @@ typedef NS_ENUM(NSInteger,MTGInterActiveStatus) {
  *  Called when the ad is clicked
  */
 - (void) onInterActiveAdClick:(MTGInterActiveManager *_Nonnull)adManager;
+
+
+/**
+ Called when whether the user finished playing the interactive ad or not.
+
+ @param adManager the manager used to show the ad.
+ @param completeOrNot If YES, user has finished playing otherwise NO.
+ @Attention Only got this callback for `MTGInterActiveResourceTypePlayable` ad. Availabled on 4.8.0 MTGInterActiveSDKVersion or later
+ */
+- (void)onInterActiveAdManager:(MTGInterActiveManager *_Nonnull)adManager playingComplete:(BOOL)completeOrNot;
+
 
 /**
  *  Called when the ad has been dismissed from being displayed

@@ -43,6 +43,11 @@ typedef enum _BaiduMobAdViewType {
 @property(nonatomic, readonly) NSString *Version;
 
 /**
+ *  使用controller present 落地页
+ */
+@property (nonatomic, strong)  UIViewController *presentAdViewController;
+
+/**
  *  开始广告展示请求,会触发所有资源的重新加载，推荐初始化以后调用一次
  */
 - (void)start;

@@ -6,7 +6,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- AdColony interstitial ad object
+ Ad object returned from a request. This is used to show and receive callbacks once the ad is presented.
  */
 @interface AdColonyInterstitial : NSObject
 
@@ -36,7 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) BOOL iapEnabled;
 
-
 /** @name Ad Event Handlers */
 
 /**
@@ -58,14 +57,14 @@ NS_ASSUME_NONNULL_BEGIN
  @discussion Note that the associated code block will be dispatched on the main thread.
  @param audioStart The block of code to be executed.
  */
-- (void)setAudioStart:(nullable void (^)(void))audioStart;
+- (void)setAudioStart:(nullable void (^)(void))audioStart __attribute__((deprecated("Deprecated in v3.3.6, use the open callback")));
 
 /**
  @abstract Sets the block of code to be executed when the interstitial stops playing audio.
  @discussion Note that the associated code block will be dispatched on the main thread.
  @param audioStop The block of code to be executed.
  */
-- (void)setAudioStop:(nullable void (^)(void))audioStop;
+- (void)setAudioStop:(nullable void (^)(void))audioStop __attribute__((deprecated("Deprecated in v3.3.6, use the close callback")));
 
 /**
  @abstract Sets the block of code to be executed when an interstitial expires and is no longer valid for playback. This does not get triggered when the expired flag is set because it has been viewed. It's recommended to request a new ad within this callback.
@@ -88,7 +87,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setClick:(nullable void (^)(void))click;
 
-
 /** @name Videos For Purchase (V4P) */
 
 /**
@@ -97,7 +95,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param iapOpportunity The block of code to be executed.
  */
 - (void)setIapOpportunity:(nullable void (^)(NSString *iapProductID, AdColonyIAPEngagement engagement))iapOpportunity;
-
 
 /** @name Ad Playback */
 
@@ -114,6 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
  Note that canceling interstitials before they finish will diminish publisher revenue.
  */
 - (void)cancel;
+
 @end
 
 NS_ASSUME_NONNULL_END

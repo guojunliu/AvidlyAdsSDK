@@ -1,8 +1,9 @@
 //
 //  ALSdk.h
+//  AppLovinSDK
 //
 //  Created by Basil Shikin on 2/1/12.
-//  Copyright © 2018 AppLovin Corporation. All rights reserved.
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -113,6 +114,14 @@ NS_ASSUME_NONNULL_BEGIN
  * For example, a username or email. We'll include this in the postback when we ping your currency endpoint from our server.
  */
 @property (nonatomic, copy, nullable) NSString *userIdentifier;
+
+/**
+ * Present the mediation debugger UI.
+ * This debugger tool provides the status of your integration for each third-party ad network.
+ *
+ * Please call this method after the SDK has initialized, e.g. in the completionHandler of -[ALSdk initializeSdkWithCompletionHandler:].
+ */
+- (void)showMediationDebugger;
 
 #pragma mark - SDK Initialization
 

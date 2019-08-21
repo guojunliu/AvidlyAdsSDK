@@ -48,6 +48,11 @@ typedef enum _BaiduMobAdInterstitialType {
 @property (nonatomic, readonly) NSString* Version;
 
 /**
+ *  使用controller present 落地页
+ */
+@property (nonatomic, strong)  UIViewController *presentAdViewController;
+
+/**
  *  实时加载并显示插屏广告.会卡住约两秒钟,影响用户体验,不建议使用.
  */
 - (void)loadAndDisplayUsingKeyWindow:(UIWindow *)keyWindow;

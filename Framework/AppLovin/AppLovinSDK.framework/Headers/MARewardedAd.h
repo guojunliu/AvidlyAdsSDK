@@ -1,9 +1,9 @@
 //
 //  MARewardedAd.h
-//  sdk
+//  AppLovinSDK
 //
 //  Created by Thomas So on 8/9/18.
-//  Copyright © 2018 AppLovin Corporation. All rights reserved.
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
 #import "ALSdk.h"
@@ -28,8 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Get an instance of rewarded ad.
  *
- * @param adUnitIdentifier Ad unit id for which to get the instance. Must not be null.
- * @param sdk              SDK  to use. Must not be null.
+ * @param adUnitIdentifier Ad unit id for which to get the instance.
+ * @param sdk              SDK  to use.
  *
  * @return An instance of rewarded ad tied to the specified ad unit ID.
  */
@@ -50,20 +50,27 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
 
 /**
- * Load ad for the current rewarded ad. Use {@link MARewardedAd:delegate} to assign a delegate that should be
- * notified about ad load state.
+ * Load ad for the current rewarded ad. Use -[MARewardedAd delegate] to assign a delegate that should be notified about ad load state.
  */
 - (void)loadAd;
 
 /**
- * Show the loaded rewarded ad. Use {@link MARewardedAd:delegate} to assign a delegate that should be
- * notified about display events.
- * <p>
- * If no ad was loaded, display delegate will be notified about the display failure. Use `isReady` to check if an ad was
- * successfully loaded.
- * </p>
+ * Show the loaded rewarded ad.
+ *
+ * Use -[MARewardedAd delegate] to assign a delegate that should be notified about display events.
+ * Use -[MARewardedAd isReady] to check if an ad was successfully loaded.
  */
 - (void)showAd;
+
+/**
+ * Show the loaded rewarded ad for a given placement to tie ad events to.
+ *
+ * Use -[MARewardedAd delegate] to assign a delegate that should be notified about display events.
+ * Use -[MARewardedAd isReady] to check if an ad was successfully loaded.
+ *
+ * @param placement The placement to tie the showing ad's events to.
+ */
+- (void)showAdForPlacement:(nullable NSString *)placement;
 
 /**
  * Check if this ad is ready to be shown.

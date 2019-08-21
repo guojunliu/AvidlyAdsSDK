@@ -17,3 +17,5 @@
 
 /// Import all your public header files here.
 #import <AppLovinAdapter/GADMAdapterAppLovinExtras.h>
+
+//6.8.0

@@ -1,9 +1,9 @@
 //
 //  ALMediationProvider.h
-//  sdk
+//  AppLovinSDK
 //
 //  Created by Thomas So on 1/28/18.
-//  Copyright © 2018 AppLovin Corporation. All rights reserved.
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
 
@@ -22,6 +22,7 @@ extern NSString *const ALMediationProviderFyber;
 extern NSString *const ALMediationProviderHeyzap;
 extern NSString *const ALMediationProviderHyperMX;
 extern NSString *const ALMediationProviderIronsource;
+extern NSString *const ALMediationProviderMAX;
 extern NSString *const ALMediationProviderMoPub;
 extern NSString *const ALMediationProviderTapdaq;
 

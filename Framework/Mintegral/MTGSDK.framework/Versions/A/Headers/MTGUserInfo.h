@@ -24,11 +24,7 @@ typedef NS_ENUM(NSInteger, MTGUserPrivateType) {
 @property (nonatomic,assign)  BOOL isGpsAllowed;
 
 @end
-/**
- *
- *@param userPrivateTypeInfo:User privacy authorization status
- *@param error:Non-europe users do not support (kMTGErrorCodeNoSupportPopupWindow)
- */
+
 typedef void (^MTGUserPrivateInfoTipsResultBlock)(MTGUserPrivateTypeInfo *userPrivateTypeInfo,NSError *error);
 
 

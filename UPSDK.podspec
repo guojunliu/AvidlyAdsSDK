@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'UPSDK'
-  s.version          = '3.0.07'
-  s.summary          = 'UPLTV SDK'
+  s.version          = '3.0.08.1'
+  s.summary          = 'UPLTV SDK 3.0.08.1'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Avidly Ad SDK.
+UPLTV Ad SDK 3.0.08.1.
                        DESC
 
-  s.homepage         = 'http://docs.upltv.com/zh/master/chapters/chapter00.html'
+  s.homepage         = 'https://www.upltv.com/doc'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { "steve" => "steve.liu@upltv.com" }
   s.source           = { :git => 'https://github.com/guojunliu/AvidlyAdsSDK.git', :tag => s.version }
@@ -22,7 +22,7 @@ Avidly Ad SDK.
 
   s.source_files = 'Framework/GDT/include/*'
   
-  s.resources = "Framework/UPSDK/resource/*", "Framework/Baidu/resource/*", "Framework/PlayableAds/resource/*", "Framework/Toutiao/resource/*"
+  s.resources = "Framework/UPSDK/resource/*", "Framework/AppLovin/resource/*", "Framework/Baidu/resource/*", "Framework/PlayableAds/resource/*", "Framework/Toutiao/resource/*"
 
   s.public_header_files = 'Framework/GDT/include/*'
 
@@ -32,6 +32,6 @@ Avidly Ad SDK.
 
   s.vendored_libraries = "Framework/GDT/libGDTMobSDK.a"
 
-  s.vendored_frameworks = 'Framework/UPSDK/UPSDK.framework', 'Framework/AdColony/AdColony.framework', 'Framework/AppLovin/AppLovinSDK.framework', 'Framework/AppLovin/AppLovinAdapter.framework', 'Framework/Baidu/BaiduMobAdSDK.framework', 'Framework/Chartboost/Chartboost.framework', 'Framework/FBAudienceNetwork/FBAudienceNetwork.framework', 'Framework/FBAudienceNetwork/FBAudienceNetworkBiddingKit.framework', 'Framework/FBAudienceNetwork/FacebookAdapter.framework', 'Framework/GoogleMobileAds/GoogleMobileAds.framework', 'Framework/GoogleMobileAds/GoogleAppMeasurement.framework', 'Framework/GoogleMobileAds/GoogleUtilities.framework', 'Framework/GoogleMobileAds/nanopb.framework', 'Framework/IronSource/IronSource.framework', 'Framework/IronSource/IronSourceAdapter.framework', 'Framework/Mintegral/MTGSDK.framework', 'Framework/Mintegral/MTGSDKReward.framework', 'Framework/Mintegral/MTGSDKInterActive.framework', 'Framework/MyTarget/MyTargetSDK.framework', 'Framework/PlayableAds/PlayableAdsSDK.framework', 'Framework/Unity/UnityAds.framework', 'Framework/Vungle/VungleSDK.framework', 'Framework/OneWay/OneWaySDK.framework', 'Framework/Toutiao/BUAdSDK.framework', 'Framework/Sigmob/WindSDK.framework'
+  s.vendored_frameworks = 'Framework/UPSDK/UPSDK.framework', 'Framework/AdColony/AdColony.framework', 'Framework/AdColony/AdColonyAdapter.framework', 'Framework/AppLovin/AppLovinSDK.framework', 'Framework/AppLovin/AppLovinAdapter.framework', 'Framework/Baidu/BaiduMobAdSDK.framework', 'Framework/Chartboost/Chartboost.framework', 'Framework/Chartboost/ChartboostAdapter.framework', 'Framework/FBAudienceNetwork/FBAudienceNetwork.framework', 'Framework/FBAudienceNetwork/FBAudienceNetworkBiddingKit.framework', 'Framework/FBAudienceNetwork/FacebookAdapter.framework', 'Framework/GoogleMobileAds/GoogleMobileAds.framework', 'Framework/GoogleMobileAds/GoogleAppMeasurement.framework', 'Framework/GoogleMobileAds/GoogleUtilities.framework', 'Framework/GoogleMobileAds/nanopb.framework', 'Framework/IronSource/IronSource.framework', 'Framework/IronSource/IronSourceAdapter.framework', 'Framework/Mintegral/MTGSDK.framework', 'Framework/Mintegral/MTGSDKReward.framework', 'Framework/Mintegral/MTGSDKInterActive.framework', 'Framework/Mintegral/MTGSDKInterstitialVideo.framework', 'Framework/MyTarget/MyTargetSDK.framework', 'Framework/PlayableAds/PlayableAdsSDK.framework', 'Framework/Unity/UnityAds.framework', 'Framework/Unity/UnityAdapter.framework', 'Framework/Vungle/VungleSDK.framework', 'Framework/Vungle/VungleAdapter.framework', 'Framework/OneWay/OneWaySDK.framework', 'Framework/Toutiao/BUAdSDK.framework', 'Framework/Sigmob/WindSDK.framework', 'Framework/Helium/HeliumSdk.framework'
 
 end

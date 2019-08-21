@@ -1,6 +1,6 @@
 //
 //  ALVariableService.h
-//  sdk
+//  AppLovinSDK
 //
 //  Created by Thomas So on 10/7/18.
 //
@@ -34,6 +34,11 @@ NS_ASSUME_NONNULL_BEGIN
  * The initial set of variables will be returned after the AppLovin SDK finishes initializing.
  */
 @property (nonatomic, weak, nullable) id<ALVariableServiceDelegate> delegate;
+
+/**
+ * Explicitly retrieve the latest variables to be returned via the delegate. Please make sure that the delegate has been set via -[ALVariableService delegate].
+ */
+- (void)loadVariables;
 
 /**
  * Returns the variable value associated with the given key, or false if

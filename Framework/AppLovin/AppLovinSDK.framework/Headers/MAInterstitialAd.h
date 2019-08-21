@@ -1,9 +1,9 @@
 //
 //  MAInterstitial.h
-//  sdk
+//  AppLovinSDK
 //
 //  Created by Thomas So on 8/9/18.
-//  Copyright © 2018 AppLovin Corporation. All rights reserved.
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
 #import "ALSdk.h"
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Create a new mediation interstitial.
  *
  * @param adUnitIdentifier Ad unit id to load ads for.
- * @param sdk              SDK to use. An instance of the SDK may be obtained by calling <code>[ALSdk shared]</code>.
+ * @param sdk              SDK to use. An instance of the SDK may be obtained by calling -[ALSdk shared].
  */
 - (instancetype)initWithAdUnitIdentifier:(NSString *)adUnitIdentifier sdk:(ALSdk *)sdk;
 - (instancetype)init NS_UNAVAILABLE;
@@ -46,20 +46,27 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
 
 /**
- * Load ad for the current interstitial. Use {@link MAInterstitialAd:delegate} to assign a delegate that should be
- * notified about ad load state.
+ * Load ad for the current interstitial. Use -[MAInterstitialAd delegate] to assign a delegate that should be notified about ad load state.
  */
 - (void)loadAd;
 
 /**
- * Show the loaded interstitial. Use {@link MAInterstitialAd:delegate:} to assign a delegate that should be
- * notified about display events.
- * <p>
- * If no ad was loaded, display delegate will be notified about the display failure. Use {MAInterstitialAd:isReady} to check if an ad was
- * successfully loaded.
- * </p>
+ * Show the loaded interstitial.
+ *
+ * Use -[MAInterstitialAd delegate] to assign a delegate that should be notified about display events.
+ * Use -[MAInterstitialAd isReady] to check if an ad was successfully loaded.
  */
 - (void)showAd;
+
+/**
+ * Show the loaded interstitial for a given placement to tie ad events to.
+ *
+ * Use -[MAInterstitialAd delegate] to assign a delegate that should be notified about display events.
+ * Use -[MAInterstitialAd isReady] to check if an ad was successfully loaded.
+ *
+ * @param placement The placement to tie the showing ad's events to.
+ */
+- (void)showAdForPlacement:(nullable NSString *)placement;
 
 /**
  * Check if this ad is ready to be shown.

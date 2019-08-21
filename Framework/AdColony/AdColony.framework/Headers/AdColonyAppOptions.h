@@ -1,5 +1,5 @@
-#import "AdColonyTypes.h"
 #import "AdColonyOptions.h"
+#import "AdColonyTypes.h"
 #import <Foundation/Foundation.h>
 
 @class AdColonyUserMetadata;
@@ -37,7 +37,6 @@ FOUNDATION_EXPORT NSString *const ADCFyber;
 /** Corona */
 FOUNDATION_EXPORT NSString *const ADCCorona;
 
-
 /**
  * Use the following pre-defined constants to configure plugin names.
  */
@@ -50,7 +49,6 @@ FOUNDATION_EXPORT NSString *const ADCAdobeAir;
 
 /** Cocos2d-x */
 FOUNDATION_EXPORT NSString *const ADCCocos2dx;
-
 
 /**
  AdColonyAppOptions objects are used to set configurable aspects of SDK state and behavior, such as a custom user identifier.

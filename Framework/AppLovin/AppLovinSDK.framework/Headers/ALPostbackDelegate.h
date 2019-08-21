@@ -1,9 +1,9 @@
 //
 //  ALPostbackDelegate
-//  sdk
+//  AppLovinSDK
 //
 //
-//  Copyright © 2018 AppLovin Corporation. All rights reserved.
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
 NS_ASSUME_NONNULL_BEGIN
