@@ -17,7 +17,7 @@
 @protocol HeliumSdkDelegate <NSObject>
 - (void)heliumDidStartWithError:(HeliumError *)error;
 @end
-@protocol HeliumInterstialAd <NSObject>
+@protocol HeliumInterstitialAd <NSObject>
 - (void) loadAd;
 - (void) showAdWithViewController:(UIViewController *)vc;
 - (BOOL) readyToShow;

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HeliumSdk : NSObject
 + (HeliumSdk *)sharedHelium ;
 - (void)startWithAppId:(NSString *)appId andAppSignature:(NSString*)appSignature delegate:(id<HeliumSdkDelegate>)delegate;
-- (id<HeliumInterstialAd>)interstitialAdProviderWithDelegate:(id<CHBHeliumInterstitialAdDelegate>)delegate andPlacementName:(nonnull NSString *)placementName;
+- (id<HeliumInterstitialAd>)interstitialAdProviderWithDelegate:(id<CHBHeliumInterstitialAdDelegate>)delegate andPlacementName:(nonnull NSString *)placementName;
 - (id<HeliumRewardedAd>)rewardedAdProviderWithDelegate:(id<CHBHeliumRewardedAdDelegate>)delegate andPlacementName:(nonnull NSString *)placementName;
 - (void)setSubjectToCoppa:(BOOL)isSubject;
 - (void)setSubjectToGDPR:(BOOL)isSubject;

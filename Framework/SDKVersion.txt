@@ -4,7 +4,7 @@ AppLovin		6.8.0
 Baidu			4.65
 Chartboost		8.0.1
 FBAudienceNetwork	5.3.2
-GDT			4.10.3
+GDT			4.10.8
 GoogleMobileAds		7.44.0
 IronSource		6.8.3
 Mintegral		5.4.2
@@ -15,4 +15,4 @@ Sigmob			2.7.1
 Toutiao			2.0.0
 Unity			3.2.0
 Vungle			6.3.2
-Helium			0.9.7
+Helium			1.0.0
