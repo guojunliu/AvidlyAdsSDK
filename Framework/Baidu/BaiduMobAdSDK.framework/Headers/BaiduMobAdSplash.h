@@ -45,6 +45,6 @@
 /**
  *  使用controller present 落地页
  */
-@property (nonatomic, strong)  UIViewController *presentAdViewController;
+@property (nonatomic, weak) UIViewController *presentAdViewController;
 
 @end

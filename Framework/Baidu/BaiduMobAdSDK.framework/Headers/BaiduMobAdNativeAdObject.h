@@ -77,15 +77,28 @@
  */
 @property (copy, nonatomic)  NSString *h;
 
+//智能优选
+/**
+ 信息流广告样式类型
+ */
+@property (nonatomic, assign) BaiduMobAdSmartFeedStyleType style_type;
+/**
+ 标记信息流广告容器宽高是px还是比例 0：无、1：像素、2：比例
+ */
+@property (nonatomic, assign) BaiduMobAdSmartFeedSizeType size_type;
+/**
+ 信息流广告容器宽
+ */
+@property (nonatomic, assign) int container_width;
+/**
+ 信息流广告容器高
+ */
+@property (nonatomic, assign) int container_height;
+
 /**
  * 是否过期，默认为false，30分钟后过期，需要重新请求广告
  */
--(BOOL) isExpired;
-
-/**
- * 可以不传
- */
-@property (nonatomic, assign)  UIViewController *presentAdViewController;
+- (BOOL) isExpired;
 
 //#warning 重要，一定要调用这个方法发送视频状态事件和当前视频播放的位置
 /**

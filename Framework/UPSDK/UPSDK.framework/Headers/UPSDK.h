@@ -20,7 +20,6 @@
 #import "UPRewardDebug.h"
 
 #import "UPIconWrapper.h"
-#import "UPWallWrapper.h"
 
 #import "UPSDKVersion.h"
 #import "UPSDKGlobalZone.h"

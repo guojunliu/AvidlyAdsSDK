@@ -39,9 +39,8 @@
 
 //重要，把wkwebview传给BaiduMobAdHybridAdManager进行注册
 - (void)injectJavaScriptBridgeForWKWebView:(WKWebView *)webview;
-- (void)injectJavaScriptBridgeForUIWebView:(UIWebView *)webview;
 
 //重要，在wkwebview回调时通知BaiduMobAdHybridAdManager，返回是否继续加载
 - (BOOL)webView:(WKWebView *)webView shouldStartLoadForNavigationAction:(WKNavigationAction *)navigationAction;
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+
 @end

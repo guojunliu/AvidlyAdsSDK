@@ -36,17 +36,22 @@
 /**
  * 模版高度，仅用于信息流模版广告
  */
-@property (nonatomic ,retain)  NSNumber *baiduMobAdsHeight ;
+@property (nonatomic ,strong) NSNumber *baiduMobAdsHeight;
 
 /**
  * 模版宽度，仅用于信息流模版广告
  */
-@property (nonatomic ,retain)  NSNumber *baiduMobAdsWidth ;
+@property (nonatomic ,strong) NSNumber *baiduMobAdsWidth;
 
 /**
  *  使用controller present 落地页
  */
-@property (nonatomic, strong)  UIViewController *presentAdViewController;
+@property (nonatomic, weak) UIViewController *presentAdViewController;
+
+/**
+ * 广告请求成功后是否缓存视频物料，YES:缓存 NO:不缓存。默认缓存
+ */
+@property (nonatomic ,assign) BOOL isCacheVideo;
 
 /**
  *  请求原生广告

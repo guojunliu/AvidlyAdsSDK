@@ -13,7 +13,7 @@
 @property (nonatomic, copy, readonly, class) NSString *SDKVersion;
 
 /**
- Register the App key that’s already been applied before requesting an ad from Tiktok Ad Network.
+ Register the App key that’s already been applied before requesting an ad from TikTok Audience Network.
  @param appID : the unique identifier of the App
  */
 + (void)setAppID:(NSString *)appID;

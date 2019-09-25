@@ -50,5 +50,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param adCount 加载条数
  */
 - (void)loadAdWithAdCount:(int)adCount;
+
+/**
+ 返回广告平台名称
+ 
+ @return 当使用流量分配功能时，用于区分广告平台；未使用时为空字符串
+ */
+- (NSString *)adNetworkName;
 @end
 NS_ASSUME_NONNULL_END

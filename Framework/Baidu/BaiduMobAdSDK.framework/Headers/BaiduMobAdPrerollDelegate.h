@@ -17,9 +17,14 @@
 
 /**
  *  加载成功
-@param  adMaterialType  BaiduMobMaterialType
+ *  @param  adMaterialType  BaiduMobMaterialType
  */
 - (void)prerollAdloadSuccess:(BaiduMobAdPreroll *)preroll withAdMaterialType:(NSString *)adMaterialType;
+
+/**
+ *  加载失败
+ */
+- (void)prerollAdLoadFail:(BaiduMobAdPreroll *)preroll;
 
 /**
  *  展示成功

@@ -40,6 +40,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)unifiedInterstitialDidPresentScreen:(GDTUnifiedInterstitialAd *)unifiedInterstitial;
 
 /**
+ *  插屏2.0广告视图展示失败回调
+ *  插屏2.0广告展示失败回调该函数
+ */
+- (void)unifiedInterstitialFailToPresent:(GDTUnifiedInterstitialAd *)unifiedInterstitial error:(NSError *)error;
+
+/**
  *  插屏2.0广告展示结束回调
  *  插屏2.0广告展示结束回调该函数
  */
@@ -128,6 +134,13 @@ NS_ASSUME_NONNULL_BEGIN
  @return 成功返回一个包含数字的string，@""或nil表示无权限或后台异常
  */
 - (NSString *)eCPMLevel;
+
+/**
+ 返回广告平台名称
+ 
+ @return 当使用流量分配功能时，用于区分广告平台；未使用时为空字符串
+ */
+- (NSString *)adNetworkName;
 
 @end
 

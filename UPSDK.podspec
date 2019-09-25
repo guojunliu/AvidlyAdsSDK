@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'UPSDK'
-  s.version          = '3.0.08.2'
-  s.summary          = 'UPLTV SDK 3.0.08.2'
+  s.version          = '3.0.08.3'
+  s.summary          = 'UPLTV SDK 3.0.08.3'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

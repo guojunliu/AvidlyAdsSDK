@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "GDTVideoConfig.h"
 
-@interface GDTUnifiedNativeAdDataObject : NSObject
+@interface GDTUnifiedNativeAdDataObject : NSObject 
 
 /**
  广告标题
@@ -86,6 +86,14 @@
  */
 @property (nonatomic, readonly) NSString *eCPMLevel;
 
+/*
+ 广告对应的CTA文案，自定义CTA视图时建议使用此字段
+ 广告对应的callToAction文案，比如“立即预约”或“电话咨询”, 自定义callToAction视图时建议使用此字段
+
+ 该字段在部分广告类型中可能为空
+ */
+@property (nonatomic, readonly) NSString *callToAction;
+
 /**
  视频广告播放配置
  */
@@ -97,6 +105,6 @@
  @param dataObject 需要对比的自渲染2.0广告数据对象
  @return YES or NO
  */
-- (BOOL) equlasAdData:(GDTUnifiedNativeAdDataObject *)dataObject;
+- (BOOL)equalsAdData:(GDTUnifiedNativeAdDataObject *)dataObject;
 
 @end

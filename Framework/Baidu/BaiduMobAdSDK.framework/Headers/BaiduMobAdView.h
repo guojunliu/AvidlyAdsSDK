@@ -30,7 +30,7 @@ typedef enum _BaiduMobAdViewType {
 /**
  *  设置／获取需要展示的广告类型
  */
-@property(nonatomic) BaiduMobAdViewType AdType;
+@property(nonatomic, assign) BaiduMobAdViewType AdType;
 
 /**
  *  设置/获取代码位id
@@ -45,7 +45,7 @@ typedef enum _BaiduMobAdViewType {
 /**
  *  使用controller present 落地页
  */
-@property (nonatomic, strong)  UIViewController *presentAdViewController;
+@property (nonatomic, weak) UIViewController *presentAdViewController;
 
 /**
  *  开始广告展示请求,会触发所有资源的重新加载，推荐初始化以后调用一次

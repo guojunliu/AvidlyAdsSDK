@@ -15,6 +15,17 @@
 @protocol BaiduMobAdRewardVideoDelegate <NSObject>
 
 @optional
+#pragma mark - 广告请求delegate
+/**
+ * 激励视频广告请求成功
+ */
+- (void)rewardedAdLoadSuccess:(BaiduMobAdRewardVideo *)video;
+
+/**
+ * 激励视频广告请求失败
+ */
+- (void)rewardedAdLoadFail:(BaiduMobAdRewardVideo *)video;
+
 #pragma mark - 视频缓存delegate
 /**
  *  视频缓存成功

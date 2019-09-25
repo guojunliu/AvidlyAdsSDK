@@ -43,7 +43,7 @@
 /**
  *  使用controller present 落地页
  */
-@property (nonatomic, strong)  UIViewController *presentAdViewController;
+@property (nonatomic, weak) UIViewController *presentAdViewController;
 
 /**
  *  请求广告
@@ -74,4 +74,19 @@
  */
 - (NSString *)adMaterialType;
 
+
+/**
+ * @brief 重新布局，根据触发时目前新尺寸，用于横竖屏切换
+ *
+ */
+- (void)reSize;
+
+
+/**
+ * @brief 重新布局.动画式变化
+ *
+ * @param duration 动画时长
+ * @param frame 目标的尺寸
+ */
+- (void)reSizeInAnimateDuration:(double)duration targetFrame:(CGRect)frame;
 @end
