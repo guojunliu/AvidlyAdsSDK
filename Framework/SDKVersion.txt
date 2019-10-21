@@ -1,4 +1,4 @@
-UPSDK			3.0.08.3
+UPSDK			3.0.08.4
 AdColony		3.3.8
 AppLovin		6.8.0
 Baidu			4.67
