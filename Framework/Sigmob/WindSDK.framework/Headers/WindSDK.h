@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#if defined(__ARM_ARCH_7S__) && __ARM_ARCH_7S__
-#error The Wind Ads SDK doesn't support linking with armv7s. Remove armv7s from "ARCHS" (Architectures) in your Build Settings.
-#endif
-
-
 // Header files.
 #import <WindSDK/WindAds.h>
 #import <WindSDK/WindAdOptions.h>

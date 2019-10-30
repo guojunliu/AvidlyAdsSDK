@@ -16,14 +16,37 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol WindRewardedVideoAdDelegate<NSObject>
 
-@optional
+@required
 
 /**
- 激励视频广告物料加载成功
-
+ 激励视频广告物料加载成功（此时isReady=YES）
+ 广告是否ready请以当前回调为准
+ 
  @param placementId 广告位Id
  */
 - (void)onVideoAdLoadSuccess:(NSString * _Nullable)placementId;
+
+
+/**
+ 激励视频广告加载时发生错误
+ 
+ @param error 发生错误时会有相应的code和message
+ @param placementId 广告位Id
+ */
+- (void)onVideoError:(NSError *)error placementId:(NSString * _Nullable)placementId;
+
+
+/**
+ 激励视频广告关闭
+ 
+ @param info WindRewardInfo里面包含一次广告关闭中的是否完整观看等参数
+ @param placementId 广告位Id
+ */
+- (void)onVideoAdClosedWithInfo:(WindRewardInfo * _Nullable)info placementId:(NSString * _Nullable)placementId;
+
+@optional
+
+
 
 
 /**
@@ -43,23 +66,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onVideoAdClicked:(NSString * _Nullable)placementId;
 
 
-/**
- 激励视频广告关闭
-
- @param info WindRewardInfo里面包含一次广告关闭中的是否完整观看等参数
- @param placementId 广告位Id
- */
-- (void)onVideoAdClosedWithInfo:(WindRewardInfo * _Nullable)info placementId:(NSString * _Nullable)placementId;
-
-
-/**
- 激励视频广告发生错误
-
- @param error 发生错误时会有相应的code和message
- @param placementId 广告位Id
- */
-- (void)onVideoError:(NSError *)error placementId:(NSString * _Nullable)placementId;
-
 
 /**
  激励视频广告调用播放时发生错误
@@ -69,17 +75,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)onVideoAdPlayError:(NSError *)error placementId:(NSString * _Nullable)placementId;
 
-
 /**
- 激励视频广告视频播放完毕
-
+ 激励视频广告视频播关闭
+ 
  @param placementId 广告位Id
  */
-- (void)onVideoAdCompletePlaying:(NSString *)placementId;
+- (void)onVideoAdPlayEnd:(NSString *)placementId;
 
 
 /**
- 激励视频广告AdServer返回广告
+ 激励视频广告AdServer返回广告(表示渠道有广告填充)
 
  @param placementId 广告位Id
  */
@@ -87,7 +92,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 激励视频广告AdServer无广告返回
+ 激励视频广告AdServer无广告返回(表示渠道无广告填充)
  
  @param placementId 广告位Id
  */

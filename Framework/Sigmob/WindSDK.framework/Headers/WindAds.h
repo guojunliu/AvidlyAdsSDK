@@ -16,19 +16,24 @@ typedef NS_ENUM(NSUInteger, WindLogLevel){
     WindLogLevelDebug=2
 };
 
+typedef NS_ENUM (NSInteger, WindConsentStatus) {
+    WindConsentUnknown = 0,
+    WindConsentAccepted,
+    WindConsentDenied,
+};
 
 typedef void(^WindAdDebugCallBack)(NSString * _Nullable msg, WindLogLevel level);
 
-//NS_ASSUME_NONNULL_BEGIN
-
 @interface WindAds : NSObject
 
-@property (nonatomic,strong) WindAdOptions *adOptions;
+@property (nonatomic,strong) WindAdOptions * _Nullable adOptions;
 
-+ (instancetype)sharedAds;
++ (instancetype _Nonnull )sharedAds;
+
++ (NSString * _Nonnull)sdkVersion;
 
 // Initialize Wind Ads SDK
-+ (void) startWithOptions:(WindAdOptions *)options;
++ (void) startWithOptions:(WindAdOptions * _Nullable)options;
 
 /**
  *   DeBug开关显示
@@ -46,7 +51,10 @@ typedef void(^WindAdDebugCallBack)(NSString * _Nullable msg, WindLogLevel level)
 - (void)setDebugCallBack:(WindAdDebugCallBack _Nullable )callBack;
 
 
+#pragma mark - GDPR SUPPORT
+/**************************  GDPR  *********************************/
++ (WindConsentStatus)getUserGDPRConsentStatus;
++ (void)setUserGDPRConsentStatus:(WindConsentStatus)status;
 
 @end
 
-//NS_ASSUME_NONNULL_END

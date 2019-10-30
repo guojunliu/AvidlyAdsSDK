@@ -22,4 +22,4 @@
 #import <FBAudienceNetworkBiddingKit/FBAdBidRequest.h>
 #import <FBAudienceNetworkBiddingKit/FBAdBidResponse.h>
 
-#define FB_BIDDING_SDK_VERSION @"5.3.1"
+#define FB_BIDDING_SDK_VERSION @"5.5.0"

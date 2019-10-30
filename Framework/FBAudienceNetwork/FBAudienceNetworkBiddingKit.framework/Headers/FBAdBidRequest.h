@@ -53,7 +53,7 @@ typedef NS_ENUM(NSInteger, FBAdBidAuctionType) {
 };
 
 @interface FBAdBidRequest: NSObject
-
+ 
 /**
  Get Audience Nework Bid for app with default settings:
  Default max time out is set to 10000 ms
