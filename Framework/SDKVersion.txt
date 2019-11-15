@@ -1,4 +1,4 @@
-UPSDK			3.0.08.5
+UPSDK			3.0.09.1
 AdColony		4.1.2		3.0.08.5版本中移除
 AppLovin		6.9.5
 Baidu			4.67
