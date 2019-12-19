@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'UPSDK'
-  s.version          = '3.0.09.1'
-  s.summary          = 'UPLTV SDK 3.0.09.1'
+  s.version          = '3.1.01.1'
+  s.summary          = 'UPLTV SDK 3.1.01.1'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-UPLTV Ad SDK 3.0.08.5
+UPLTV Ad SDK 3.1.01.1
                        DESC
 
   s.homepage         = 'https://www.upltv.com/doc'

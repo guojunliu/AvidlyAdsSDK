@@ -1,16 +1,14 @@
-UPSDK			3.0.09.1
-AdColony		4.1.2		3.0.08.5版本中移除
+UPSDK			3.1.01.1
+AdColony		4.1.2		3.0.08.5版本中暂时移除
 AppLovin		6.9.5
 Baidu			4.67
 Chartboost		8.0.1
-FBAudienceNetwork	5.5.1
+FBAudienceNetwork	5.6.0
 GDT			4.10.14
 GoogleMobileAds		7.51.0
 IronSource		6.8.3
 Mintegral		5.7.0
 MyTarget		4.7.9
-OneWay			2.1.0		永久移除
-PlayableAds		1.0.10		永久移除
 Sigmob			2.13.1
 Toutiao			2.4.6
 Unity			3.3.0

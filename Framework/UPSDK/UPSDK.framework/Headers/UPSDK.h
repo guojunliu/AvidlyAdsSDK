@@ -29,15 +29,18 @@
 
 /**
  初始化SDK
+ 
+ @param appKey appKey
  */
-+ (void)initSDK;
++ (void)initSDKWithAppKey:(NSString *)appKey;
 
 /**
  初始化SDK（根据发行区域）
 
+ @param appKey appKey
  @param zone 发行区域
  */
-+ (void)initSDK:(UPSDKGlobalZone)zone;
++ (void)initSDKWithAppKey:(NSString *)appKey zone:(UPSDKGlobalZone)zone;
 
 /**
  CP初始化ABTest配置
@@ -105,5 +108,17 @@
  @return isLogOpened
  */
 + (BOOL)isLogOpened;
+
+/**
+ 自检接口，方便用户检测 UPSDK 接入是否正确，自检成功游戏自动上线（此方式仅用于测试阶段，正式应用请不要调用该接口）。
+ 请在初始化之后调用。
+ 
+ @param viewController 用来展示测试页面的viewController
+ */
++ (void)autoOneKeyInspect:(UIViewController *)viewController;
+
++ (void)setAppsFlyerUID:(NSString *)appsFlyerUID;
+
++ (void)setAdjustId:(NSString *)adjustId;
 
 @end
