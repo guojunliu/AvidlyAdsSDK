@@ -1,0 +1,6 @@
+framework module OpenUpSDK {
+  umbrella header "OpenUpSDK.h"
+
+  export *
+  module * { export * }
+}

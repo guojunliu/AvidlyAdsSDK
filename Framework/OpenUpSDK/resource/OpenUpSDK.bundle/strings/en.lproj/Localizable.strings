@@ -1,0 +1,76 @@
+/* 
+  Localizable.strings
+  OpenUpSDK
+
+  Created by steve on 2017/2/20.
+  Copyright © 2017年 liuguojun. All rights reserved.
+*/
+
+
+
+"up_ad_debug_help_link" = "help link";
+"up_ad_debug_access" = "access";
+"up_ad_debug_warning" = "warring";
+"up_ad_debug_error" = "error";
+"up_ad_debug_load_fail" = "Load fail";
+"up_ad_debug_play_atleast_once_rewardvideo_play" = "Please show RewardVideo";
+"up_ad_debug_play_atleast_once_interstitialAds_play" = "Please show  Interstitial Ads ";
+"up_ad_debug_rewardvideo_done" = "Have accessed RewardVideo Test";
+"up_ad_debug_interstitialAds_done" = "Have accessed Interstitial Ads Test";
+"up_ad_debug_play" = "Play";
+"up_ad_debug_rewardvideo_name" = "RewardVideo";
+"up_ad_debug_interstitial_name" = "Interstitial ads";
+"up_ad_debug_please_retry" = "please try again";
+"up_ad_debug_please_retry_after_playsuccess" = "Please retry to play more";
+"up_ad_debug_done" = "have done";
+"up_ad_debug_please_press_play" = "Please press play";
+"up_ad_debug_missed_affs" = "Necessary Ad platform SDK not found";
+"up_ad_debug_suggest_affs" = "Recommended to add the following alliance SDK";
+"up_ad_debug_missed_support" = "Necessary support library not found";
+"up_ad_debug_missed_support_gson" = " 2.7 or Higher";
+"up_ad_debug_missed_support_eventbus" = " 3.1.1 or Higher";
+"up_ad_debug_missed_support_android_ver" = " 28.0.0 or Higher";
+"up_ad_debug_passed_affs" = "Alliance SDK introduced normally";
+"up_ad_debug_passed_support" = "Support library dependency OK";
+"up_ad_debug_missed_permission" = "Have not requested necessary premission";
+"up_ad_debug_common_unkown_msg" = "Unknown result";
+"up_ad_debug_config_loading" = "Getting ad configuration";
+"up_ad_debug_config_loaded" = "Advertisement initialization completed";
+"up_ad_debug_config_waiting" = "Please wait for the result";
+"up_ad_debug_config_load_error" = "Advertisement initialization exception";
+"up_ad_debug_config_wrong" = "Unknown exception, please check the log";
+"up_ad_debug_config_from_server" = "Remote ad configuration loaded";
+"up_ad_debug_config_from_local" = "Default ad configuration loaded";
+"up_ad_debug_title_name" = "OpenUpSDK Debug Tool";
+"up_ad_debug_check_internet" = "Network connection error";
+"up_ad_debug_sdkversion_error" = "You should update to the newest OpenUpSDK";
+"up_ad_debug_check_init" = "OpenUpSDK Init";
+"up_ad_debug_check_permission" = "Required Permission";
+"up_ad_debug_check_support" = "Required Support libs";
+"up_ad_debug_check_rd_affs" = "Required Reward video Ad Networks";
+"up_ad_debug_check_il_affs" = "Required Interstitial Ads Networks";
+"up_ad_debug_mis_onresume" = "missed UPAdsSdk.onApplicationPause() or UPAdsSdk.onApplicationResume() callback of Upsdk";
+"up_ad_debug_mis_analysis_init" = "Analysis not initialized";
+"up_ad_debug_mis_analysis_token" = "Analysis token not acquired";
+"up_ad_debug_rsk_error" = "Internal Exception,please update OpenUpSDK";
+"up_ad_debug_selfcheck_doing" = "Self-checking...";
+"up_ad_debug_selfcheck_pass" = "Self-checking passed";
+"up_ad_debug_selfcheck_fail" = "Self-checking failed";
+"up_ad_debug_error_selfcheck_initaly" = "Has error in initiliazing aly";
+"up_ad_debug_error_selfcheck_alytoken" = "Has error in get token from aly";
+"up_ad_debug_check_rewardvideo" = "RewardVideo Test";
+"up_ad_debug_check_interstitialAds" = "InterstitialAds Test";
+"up_ad_debug_check_selfinspect" = "SDK Self-Inspect";
+"up_ad_debug_self_inspect_msg" = "Introspecting...,this page will close in 1 seconds ";
+"up_ad_debug_retry" = "retry";
+"up_ad_debug_pass_test" = "Winner winner, Bugs killer!";
+"up_ad_debug_pass_test_sub" = "Please move to UPLTV console to complete the follow-up operations";
+"up_ad_debug_loading" = "Sending...";
+"up_ad_debug_no_created" = "Please create your app in UPLTV.com";
+"up_ad_debug_close" = "Close";
+"up_ad_debug_submit_test" = "Submit test";
+"up_ad_debug_load" = "Load";
+"up_ad_debug_show" = "Show";
+"up_ad_debug_bomda_app_id_error" = "The GADApplicationIdentifier parameter in the Info.plist is inconsistent with the server. Please check.";
+"up_ad_debug_guide_error_detail" = "Serious issues which may lead to reduced income.";
+"up_ad_debug_guide_warning_detail" = "Non-essential suggestions.";

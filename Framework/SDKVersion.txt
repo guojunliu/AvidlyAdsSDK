@@ -1,9 +1,9 @@
-UPSDK			3.1.01.1
+OpenUpSDK		3.1.02.1
 AdColony		4.1.2		3.0.08.5版本中暂时移除
 AppLovin		6.9.5
 Baidu			4.67
 Chartboost		8.0.1
-FBAudienceNetwork	5.6.0
+FBAudienceNetwork	5.5.1
 GDT			4.10.14
 GoogleMobileAds		7.51.0
 IronSource		6.8.3

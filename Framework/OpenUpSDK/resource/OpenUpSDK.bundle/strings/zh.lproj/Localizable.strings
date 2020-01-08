@@ -1,0 +1,76 @@
+/* 
+ Localizable.strings
+ OpenUpSDK
+ 
+ Created by steve on 2017/2/20.
+ Copyright © 2017年 liuguojun. All rights reserved.
+ */
+
+
+
+"up_ad_debug_help_link" = "查看详细帮助";
+"up_ad_debug_access" = "通过";
+"up_ad_debug_warning" = "警告";
+"up_ad_debug_error" = "错误";
+"up_ad_debug_load_fail" = "加载失败";
+"up_ad_debug_play_atleast_once_rewardvideo_play" = "至少完成一次激励视频展示";
+"up_ad_debug_play_atleast_once_interstitialAds_play" = "至少完成一次插屏广告展示 ";
+"up_ad_debug_play" = "播放";
+"up_ad_debug_rewardvideo_name" = "激励视频";
+"up_ad_debug_interstitial_name" = "插屏广告";
+"up_ad_debug_please_retry" = "请重试";
+"up_ad_debug_done" = "已经完成";
+"up_ad_debug_please_retry_after_playsuccess" = "继续播放请重试";
+"up_ad_debug_please_press_play" = "请点击播放";
+"up_ad_debug_rewardvideo_done" = "激励视频测试通过";
+"up_ad_debug_interstitialAds_done" = "插屏广告测试通过";
+"up_ad_debug_missed_affs" = "缺少必要的联盟SDK";
+"up_ad_debug_suggest_affs" = "建议添加广告配置依赖的以下联盟SDK";
+"up_ad_debug_passed_affs" = "广告配置所依赖的联盟SDK引入正常";
+"up_ad_debug_missed_support" = "缺少必要的支持库";
+"up_ad_debug_missed_support_gson" = " 2.7或以上版本";
+"up_ad_debug_missed_support_eventbus" = " 3.1.1或以上版本";
+"up_ad_debug_missed_support_android_ver" = " 28.0.0或以上版本";
+"up_ad_debug_passed_support" = "支持库依赖正常";
+"up_ad_debug_missed_permission" = "缺少必要的权限申请";
+"up_ad_debug_common_unkown_msg" = "未知结果";
+"up_ad_debug_config_loading" = "正在获取广告配置";
+"up_ad_debug_config_loaded" = "广告初始化完成";
+"up_ad_debug_config_load_error" = "广告初始化异常";
+"up_ad_debug_config_wrong" = "未知异常，请查看日志";
+"up_ad_debug_config_waiting" = "请等待结果";
+"up_ad_debug_config_from_server" = "已加载远程广告配置";
+"up_ad_debug_config_from_local" = "已加载默认广告配置";
+"up_ad_debug_title_name" = "OpenUpSDK 广告自动测试";
+"up_ad_debug_check_internet" = "请检查网络连接是否正常";
+"up_ad_debug_mis_onresume" = "缺少 UPAdsSdk.onApplicationPause() 或 UPAdsSdk.onApplicationResume() 调用";
+"up_ad_debug_mis_analysis_init" = "Analysis未初始化";
+"up_ad_debug_mis_analysis_token" = "Analysis token未获取";
+"up_ad_debug_rsk_error" = "内部错误,请升级sdk";
+"up_ad_debug_selfcheck_doing" = "正在自检";
+"up_ad_debug_selfcheck_pass" = "自检通过";
+"up_ad_debug_selfcheck_fail" = "自检失败";
+"up_ad_debug_error_selfcheck_initaly" = "统计包初始化错误";
+"up_ad_debug_error_selfcheck_alytoken" = "统计包获得token";
+"up_ad_debug_check_init" = "OpenUpSDK 初始化";
+"up_ad_debug_check_permission" = "权限申请";
+"up_ad_debug_check_support" = "支持库检查";
+"up_ad_debug_check_rd_affs" = "视频广告联盟检查";
+"up_ad_debug_check_il_affs" = "插屏广告联盟检查";
+"up_ad_debug_sdkversion_error" = "当前版本过低，请升级OpenUpSDK";
+"up_ad_debug_loading" = "上报中";
+"up_ad_debug_check_rewardvideo" = "激励视频检查";
+"up_ad_debug_check_interstitialAds" = "插屏广告检查";
+"up_ad_debug_self_inspect_msg" = "正在进行自检，1秒后将自动关闭";
+"up_ad_debug_check_selfinspect" = "SDK自检";
+"up_ad_debug_retry" = "重试";
+"up_ad_debug_pass_test" = "大吉大利! 测试通过!";
+"up_ad_debug_pass_test_sub" = "请移步 UPLTV 后台完成后续操作";
+"up_ad_debug_no_created" = "请在UPLTV.com中创建此应用";
+"up_ad_debug_close" = "关闭";
+"up_ad_debug_submit_test" = "提交测试";
+"up_ad_debug_load" = "加载";
+"up_ad_debug_show" = "展示";
+"up_ad_debug_bomda_app_id_error" = "Info.plist文件中的GADApplicationIdentifier参数与服务端不一致";
+"up_ad_debug_guide_error_detail" = "直接影响广告展示或收益的错误内容，请务必修正";
+"up_ad_debug_guide_warning_detail" = "建议改善内容，允许忽略";
